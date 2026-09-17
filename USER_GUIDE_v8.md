@@ -4,6 +4,8 @@
 > 歡迎來到 DROS 8.0.0 (Epistemic Edition) 法義推理與認識論作業系統。本系統將極度硬核的 **10,156 個** 核心概念節點，化為您本機隨身、忠誠 of 二軌制法義伴學。
 > 
 > 本指南為兩類修行者設計。如果您是完全不懂程式碼的「終端修行者」，請直接閱讀第一部分；如果您是想要二次開發的「技術極客」，請查看第二部分。
+> 
+> 🌐 **[English Version (USER_GUIDE_v8_EN.md)](USER_GUIDE_v8_EN.md)** is available here.
 
 ---
 
@@ -28,26 +30,29 @@
 
 ---
 
-## 🚀 快速啟動指南 (Quick Start)
+## 🚀 快速啟動指南 (Quick Start - Zero-Ops 零配置)
+
+> 💡 **原生架構升級公告**：DROS 8.0 伴學外掛現已全面升級為**純 TypeScript/WebAssembly 原生架構**！
+> 不論是 PC 電腦端或手機端，**一般伴學使用者均「完全不需要安裝 Python 環境」**。原典內文穿透、名相檢索與金剛雙軌戒律已全由外掛原生接管，隨開即用！
 
 1. **安裝 Obsidian**: 請前往 [Obsidian 官網](https://obsidian.md/) 下載並安裝。
-2. **安裝 Python**: 確保您的 PC 已安裝 Python 3.10 以上版本（[👉 點此前往 Python 官方下載頁面](https://www.python.org/downloads/)），**請務必在安裝時勾選下方的「Add Python to PATH」**。
-3. **準備 API Key**: 請至 [Google AI Studio](https://aistudio.google.com/) 申請您的 Gemini API Key。
-4. **載入 DROS 知識庫**: 打開 Obsidian，選擇「開啟資料夾作為儲存庫 (Open folder as vault)」，指向您下載解壓縮後的本專案資料夾。
-5. **啟用專屬對話外掛 (🔑 關鍵步驟)**:
+2. **準備 API Key**: 請至 [Google AI Studio](https://aistudio.google.com/) 免費申請您的 Gemini API Key（亦支援 OpenRouter、DeepSeek 等自訂 API）。
+3. **載入 DROS 知識庫**: 打開 Obsidian，選擇「開啟資料夾作為儲存庫 (Open folder as vault)」，指向您下載解壓縮後的本專案資料夾。
+   - *(可選自由掛載)*：若您已下載了完整版的 1.6GB 大覺藏，直接將經文資料夾放入 `Vault_DajueZang/` 即可，TS 外掛會在查詢時自動以毫秒級速度原生穿透！
+4. **啟用專屬對話外掛 (🔑 關鍵步驟)**:
    - 進入 Obsidian 介面，點擊左下角的「設定 (⚙️ 齒輪圖示)」 -> 點選左側選單的「社群外掛程式 (Community plugins)」。
    - 若為首次使用，請點擊 **「關閉限制模式 (Turn off Restricted Mode)」**。
    - 點擊 **「瀏覽 (Browse)」** 按鈕，在搜尋列輸入 **`DROS Doctrinal Copilot`**。
    - 點擊 **「安裝 (Install)」** 並點擊 **「啟用 (Enable)」**！
-   - 點擊該外掛名稱旁邊的 ⚙️ 齒輪圖示（或點擊左側選單最下方的 DROS Copilot 設定），進行對對答模式設定：
-     - 🌐 **Zero-Ops 直連模式（預設推薦）**：選擇 `Direct Mode` 並填入您的 Gemini API Key 即可開始隨身伴學！
-     - 🔌 **自訂 API 模式**：亦可填入 OpenRouter 或自訂 API 端點與金鑰（如 DeepSeek）。
-     - 🛡️ **本地代理模式**：若配合本機 Python 環境，亦可選擇 `Proxy Mode` 連線本機網關。
-6. **啟動 DROS 核心推理引擎 (代理伺服器)**: 
-   - **Windows 用戶**：在專案根目錄中，雙擊執行 **`啟動DROS網關.bat`** (開源版使用者執行 **`dros-start.bat`**)。它會自動清除舊快取，以微秒級速度加載並預熱最新的 28,600+ 概念圖譜。
-   - **Mac/Linux 用戶**：請在終端機執行 `python gemini_proxy.py`。
-7. **(進階) 注入大覺藏與金剛戒律**: 
-   若您已下載了完整版的 1.6GB 大覺藏，請在網關啟動後，**雙擊執行 `DROS金剛注射器`**，系統會自動在記憶體中完成萬卷經文的掛載與語意交織。
+   - 點擊該外掛名稱旁邊的 ⚙️ 齒輪圖示（或點擊左側選單最下方的 DROS Copilot 設定），將 `Engine Mode` 保持為預設的 **Zero-Ops 直連模式 (Direct Mode)**，並填入您的 Gemini API Key。
+5. **開始法義伴學**:
+   - 點擊 Obsidian 介面左側功能列的 **🪷 輪寶圖標 (Dharma Chakra Icon)** 即可展開右側對話伴學視窗，即刻享受零幻覺的義理對話！
+
+---
+
+### 🛠️ 二次開發與極客專區 (選配 Optional：本機 Python 核心開發)
+> **一般修行與伴學使用者請跳過此區。**  
+> 僅當您是想要修改底層 Python 開採管線（如 `auto_harvest_and_weave.py`、`synapse_weaver`）或自行在本機顯卡架設本地代理網關 (`gemini_proxy.py`) 的極客工程師，才需要配置 Python 3.10+ 環境並執行 `run.bat` 或 `啟動DROS網關.bat`。
 
 ---
 

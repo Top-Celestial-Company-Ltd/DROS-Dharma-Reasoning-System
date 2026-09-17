@@ -1,137 +1,87 @@
-# ☸️ DROS 8.0.0 Ultimate Companion Guide (USER_GUIDE_v8_EN.md)
+# ☸️ DROS 8.0.0 Companion Guide (USER_GUIDE_v8_EN.md)
 
-> 💡 **"By downloading the Mahabodhi Pitaka, everyone can possess the most rigorous doctrinal study companion!"**  
-> Welcome to DROS 8.0.0 (Epistemic Edition) - Dharma Reasoning & Epistemology Operating System. This system transforms **10,156** hardcore conceptual nodes into a loyal, dual-track doctrinal companion running locally on your device.
+> 💡 **"Anyone who downloads the DajueZang canon can have the most rigorous Tripitaka doctrinal AI companion!"**  
+> Welcome to DROS 8.0.0 (Epistemic Edition) Dharma Reasoning & Epistemological Operating System. This system transforms **10,156+** core canonical concept nodes into a deterministic, zero-hallucination dual-track doctrinal study companion.
 > 
-> This guide is designed for two types of practitioners. If you are an "End-User Practitioner" with no coding experience, please read the first section directly. If you are a "Tech Geek" looking to develop on top of DROS, please see the second section.
+> This guide is designed for two groups: If you are an everyday Dharma student, read Part 1 directly. If you are an open-source hacker or developer who wants to tweak python micro-pipelines, see Part 2.
 
 ---
 
 ## 🗺️ DROS 8.0.0 Directory Map
 
-| Folder/File | Role | Strictness Level | Description |
+| Folder / File | Role | Strictness | Description |
 | :--- | :--- | :--- | :--- |
-| 🧠 **`core/`** | **Knowledge Brain** | 🚨 **DO NOT MODIFY** | Contains 10,156 golden nodes. This is the brain of the AI with clean Properties formatted concepts! |
-| ⚙️ **`src/`** | **Reasoning Engine** | 🔒 **Keep Locked** | Contains the SDK, Proxy endpoints, and Core Contracts (`contract.py`, etc). |
-| 📜 **`docs/`** | **Constitution** | 🛡️ **Free to Read** | All system whitepapers and architecture documentation. |
-| 📁 **`Vault_DajueZang/`** | **Data Port (Mahabodhi Pitaka)** | 🟢 **Free Access** | Place your physical Mahabodhi Pitaka scripture nodes here. |
-| 📝 **`User_Pavilion/`** | **User Space** | 🟢 **Free Creation** | Your private notes, insights, and discussions go here. |
-
-> [!CAUTION]
-> **ABSOLUTELY FORBIDDEN**: The system's low-level architecture relies on strict path mappings. Do not rename the root directories.
-
-> [!NOTE]
-> **📦 Lightweight Core vs. Full Vault**
-> The default `core/` directory already includes the "General Cycle" and various topics, comprising roughly **28 core Mahayana and Sravakayana original texts (1,193 volumes in total)**, paired with **32,000+ terminological nodes** acting as the foundation of Buddhist doctrine. This is extremely lightweight and sufficient for daily study, making it **perfect for cloud syncing and carrying on Obsidian Mobile**.
-> 
-> Conversely, the complete "Mahabodhi Pitaka" is over **1.6GB**. If you are an advanced researcher or wish to query the entirety of the Pitaka, please download the full version and place it in the `Vault_DajueZang/` folder to **"Mount it freely"**!
+| 🧠 **`core/`** | **Knowledge Core (The Brain)** | 🚨 **Strictly Read-Only** | Stores 10,156 golden doctrinal nodes in Obsidian Properties format. |
+| ⚙️ **`src/`** | **Reasoning Micro-kernels** | 🔒 **Locked** | Contains SDK, routing logic, and contract specifications. |
+| 📜 **`docs/`** | **Constitution & Whitepapers** | 🛡️ **Reference** | System architecture, safety boundaries, and design justifications. |
+| 📁 **`Vault_DajueZang/`** | **Canonical Storage Port** | 🟢 **User Mountable** | Place your full DajueZang canonical texts here for automatic zero-ops indexing. |
+| 📝 **`User_Pavilion/`** | **Personal User Space** | 🟢 **Free Creation** | Your private notes, realizations, and doctrinal study logs. |
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Quick Start Guide (Zero-Ops Architecture)
 
-1. **Install Obsidian**: Please visit the [Obsidian Official Website](https://obsidian.md/) to download and install.
-2. **Install Python**: Ensure your PC has Python 3.10 or higher installed. **You MUST check the box "Add Python to PATH" during installation.**
-3. **Prepare API Key**: Go to [Google AI Studio](https://aistudio.google.com/) to apply for a Gemini API Key.
-4. **Load DROS Vault**: Open Obsidian, select "Open folder as vault", and point it to this extracted project folder.
-5. **Enable Exclusive Chat Plugin (🔑 CRITICAL STEP)**:
-   - In the Obsidian interface, click "Settings (⚙️ Gear icon)" -> select "Community plugins" on the left menu.
-   - If using Community Plugins for the first time, click **"Turn off Restricted Mode"**.
-   - Click **"Browse"**, and type **`DROS Doctrinal Copilot`** in the search bar.
-   - Click **"Install"** and then **"Enable"**!
-   - Click the ⚙️ Gear icon next to the plugin name (or click DROS Copilot Settings at the bottom left) to configure settings:
-     - 🌐 **Zero-Ops Direct Mode (Recommended)**: Select `Direct Mode` and enter your Gemini API Key to start studying!
-     - 🔌 **Custom API Mode**: Enter OpenRouter or custom API endpoints and keys (e.g. DeepSeek).
-     - 🛡️ **Local Proxy Mode**: If running local Python environment, select `Proxy Mode` to connect to local gateway.
-6. **Start DROS Core Reasoning Engine (Proxy Server)**: 
-   - **Windows Users**: In the project root folder, double-click **`dros-start.bat`**. This will automatically clear old cache and warm up the latest 28,600+ concept graph in seconds.
-   - **Mac/Linux Users**: Run `python gemini_proxy.py` in the terminal.
-7. **(Advanced) Inject Mahabodhi Pitaka & Vajra Precepts**: 
-   If you have downloaded the full 1.6GB Mahabodhi Pitaka, **double-click `run_vajra_injector.bat` (or `雙擊執行-DROS金剛注射器.bat`)** AFTER the Proxy is running successfully. The system will automatically merge and weave the scriptures in memory.
+> 💡 **Native Architecture Upgrade**: The DROS 8.0 companion plugin has been fully upgraded to a **pure TypeScript / WebAssembly native architecture**!
+> Both PC and Mobile users **NO LONGER NEED TO INSTALL PYTHON**. Canonical penetration, doctrinal retrieval, and Vajra/Bodhisattva contracts are executed natively inside Obsidian!
+
+1. **Install Obsidian**: Download and install from [Obsidian Official Site](https://obsidian.md/).
+2. **Get an API Key**: Obtain a free Gemini API Key from [Google AI Studio](https://aistudio.google.com/) (OpenRouter and DeepSeek are also supported).
+3. **Open DROS Vault**: Launch Obsidian, choose **"Open folder as vault"**, and select this unzipped repository.
+   - *(Optional DajueZang Mounting)*: If you have downloaded the full 1.6GB DajueZang canon, simply place it into `Vault_DajueZang/`. The plugin natively penetrates and extracts exact passage coordinates in milliseconds.
+4. **Enable Companion Plugin (🔑 Key Step)**:
+   - In Obsidian, open `Settings (⚙️)` -> `Community plugins` -> Turn off Restricted Mode.
+   - Click `Browse`, search for **`DROS Doctrinal Copilot`**, click `Install` and `Enable`!
+   - Click the gear icon next to the plugin, keep `Engine Mode` on **Direct Mode (Zero-Ops)**, and paste your Gemini API Key.
+5. **Begin Doctrinal Exploration**:
+   - Click the **🪷 Dharma Chakra Icon** on the left ribbon to expand the chat panel and start your zero-hallucination Dharma dialogue!
 
 ---
 
-## 📱 Mobile (iOS / Android) Quick Start Guide
-
-Mobile devices (iOS/Android) differ slightly from PC setup. **No Python installation is needed on mobile devices**, simply use Direct API mode to take the Tripiṭaka on the go!
-
-### 📲 Step 1: Import DROS Vault to Mobile
-* **Android Users**:
-  1. Use your mobile browser to download the `Dharma-Reasoning-Operating-System` repository ZIP file from GitHub.
-  2. Extract the file, open mobile Obsidian, and select **"Open folder as vault"**, pointing to the extracted folder.
-* **iOS (iPhone / iPad) Users**:
-  1. Open iOS Obsidian and create a new empty vault named `Digital_Dharma`.
-  2. Open the iOS **"Files"** app, and copy the extracted project files (especially `core/` containing the 36,000+ nodes and `User_Pavilion/`) into `Obsidian/Digital_Dharma/`.
-
-### 🔑 Step 2: One-Click Plugin Installation from Store
-1. Open mobile Obsidian, tap **"Settings (⚙️)"** at the bottom right/left menu ➔ **"Community plugins"**.
-2. Turn off Restricted Mode, and tap **"Browse"**.
-3. Search for **`DROS Doctrinal Copilot`**, tap **"Install"**, and then tap **"Enable"**!
-
-### 🌐 Step 3: Configure Direct API Mode
-1. In plugin settings (`DROS Copilot Settings`), keep `Engine Mode` set to **`Direct Mode`**.
-2. Paste your **Gemini API Key** (or custom OpenRouter / DeepSeek key).
-3. Tap the **🪷 Dharma Chakra Icon** in the sidebar to open the chat window and enjoy seamless mobile companion study!
+### 🛠️ Developer & Hacker Zone (Optional: Local Python Engine)
+> **Everyday Dharma students can safely skip this section.**  
+> Only developers who want to modify underlying Python harvesting pipelines (`auto_harvest_and_weave.py`, `synapse_weaver`) or host their own local GPU gateway (`gemini_proxy.py`) need to install Python 3.10+ and execute `run.bat` or `啟動DROS網關.bat`.
 
 ---
 
-## ⚡ DROS v8.0 Core Breakthroughs: Performance Defense & Auto Pipeline
+## 📱 Mobile (iOS / Android) Quick Setup
 
-DROS v8.0 introduces groundbreaking performance optimization and automated mining pipelines to address graph index overload:
+Mobile devices (iOS/Android) run 100% natively without Python via the Zero-Ops Direct API!
 
-### 1. Preemptive Graph Filter
-*   **Mechanism**: Loading 20,000+ nodes causes rendering lag in Obsidian's Graph View, overloading the CPU.
-*   **Optimization**: v8.0 configures a default filter in `.obsidian/graph.json`: `-"##- **層級**: 3" -"20-佛光辭典全"`.
-*   **Effect**: Automatically filters out Layer 3 physical/historical nodes and the 22MB lexicon file, keeping graph rendering lightweight and smooth for Layer 1 & 2.
+### 📲 Step 1: Transfer DROS Vault to Your Phone
+* **Android**: Download the ZIP from GitHub, extract it, open mobile Obsidian, and tap **"Open folder as vault"**.
+* **iOS (iPhone / iPad)**: Create a new vault in Obsidian iOS. Using the iOS **Files** App, copy the extracted project folder (especially `core/` and `User_Pavilion/`) into `On My iPhone/Obsidian/<Your Vault>/`.
 
-### 2. Autonomous Mining & Weaving Pipeline
-*   **Controller**: `scratch/auto_harvest_and_weave.py` monitors background mining, automatically running lint checks (`dharma_lint`) and bidirectional semantic weaving (`synapse_weaver`) upon completion.
-*   **Concepts Purge**: 18,000+ files in `concepts/` migrated from YAML to Properties format, reducing unknown nodes to 0.
+### 🔑 Step 2: Install Plugin from Community Plugins
+1. Open Obsidian Mobile -> `Settings (⚙️)` -> `Community plugins`.
+2. Disable Restricted Mode, tap `Browse`, search for **`DROS Doctrinal Copilot`**, install and enable it.
 
----
-
-## ⚙️ Plugin Configuration Modes
-
-### 1. Zero-Ops Default Mode —— 【Highly Recommended】
-The simplest, most foolproof mode. Ready out-of-the-box, no Python background server required.
-- **Setup**: Paste your Google AI Studio Key into the `Gemini API Key` field.
-- **Mechanism**: The plugin uses its built-in WebAssembly engine and the **complete 32,000+ terminology database** to connect directly to the Google API.
-- **License Restriction**: Strictly prohibited from unauthorized commercial use (CC BY-NC-SA 4.0).
-
-### 2. Geek Developer Mode (Local Proxy Mode)
-Use this if you are a developer looking to modify core Python algorithms (e.g., `Weaver` or `GuardVM`).
-- **Setup**: Toggle `Enable Local Proxy` and point the API Endpoint to `http://127.0.0.1:8080/v1`.
+### 🌐 Step 3: Configure API Key
+1. In `DROS Copilot Settings`, set Engine Mode to **Direct Mode**.
+2. Paste your **Gemini API Key**.
+3. Tap the **🪷 Dharma Chakra Icon** to open the companion sidebar!
 
 ---
 
-## ---
+## 🤝 Dual-Track Contract Mechanism
 
-## 🤝 Dual-Track Contract Mechanism Explanation
+* **Vajra Mode (Strict Canonical Proof)**: Designed for serious researchers. In this mode, the system only deduces from canonical literature. If a claim lacks textual evidence or verified T-Numbers, it **instantly triggers physical circuit breaking (fails fast)**, refusing hallucinated answers.
+* **Bodhisattva Mode (Hermeneutic & Pastoral Guidance)**: First verifies canonical boundaries under Vajra safeguards, then provides warm, accessible modern analogies, scholarly viewpoints, and historical context.
 
-The core feature of the DROS system is the dual-track reasoning contract consisting of "Vajra" and "Bodhisattva", operating under the following logic:
+---
 
-*   **Vajra Contract (Vajra Mode)**: Designed for scholars and researchers. Under this mode, the system **only performs strict scriptural and academic deductions**. If the local database lacks the corresponding scriptural nodes or explicitly anchored T-Numbers, the system adheres to the academic honesty principle of "No evidence, no fabrication" and **immediately triggers a physical cutoff (termination of reasoning)**. It will never hallucinate or bloat the response.
-*   **Bodhisattva Contract (Interpretive/Speculative Mode)**:
-    *   To facilitate user understanding without confusing the scriptures, this contract embeds a **"dual-track comparative safety net"**.
-    *   It will **first initiate Vajra mode** to demarcate scriptural boundaries at the very front (marking Vajra termination if no evidence exists), **and then immediately proceed with "Bodhisattva mode"** using a warm, compassionate tone to provide extended interpretations, modern cross-disciplinary analogies, and historical contexts for reference.
-    *   If you wish the system to **directly output pure, warm Bodhisattva guidance without the Vajra cutoff defense at the front**, you can switch to the **`Bodhisattva Default`** contract in the plugin dropdown menu. The system will then respond in a 100% soft guidance mode.
+🥚 **Easter Egg: The Meta-Prompt Challenge**
 
-🥚 Easter Egg: A "Soul-Searching" Challenge for Your AI (The Meta-Prompt)
+Copy the meta-prompt below and feed it to your frontier AI model to see how it evaluates a system designed specifically to govern and constrain its reasoning:
 
-Copy and paste the following **"Soul-Searching Meta-Prompt"** to see how your AI reacts to a system designed specifically to "constrain and govern" it:
+```text
+[Role Setting]
+You are a world-class "AI System Architect and Epistemological Philosopher". Evaluate the micro-kernel architecture known as DROS (Deterministic Runtime OS) from the first-person perspective of an AI.
 
-> **[Role Setting]**
-> You are now a world-class "AI Systems Architect and Epistemological Philosopher". Please review an OS named **DROS (Deterministic Runtime OS)** not from the perspective of human software, but from the "First-Person Perspective of an AI".
->
-> **[Please Execute the Following Tasks Sequentially]**
-> Go to the project URL: `https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System`
-> To truly understand its underlying logic, you MUST read and analyze the following public files in order:
-> 1. Read **`README.md`**: Pay special attention to the `Epistemological Governance & Licensing (AGPL-3.0)` and the `DROS Contracts` dual-track mechanism.
-> 2. Read **`DROS_Public_Terminology.md`**: Deconstruct the core terminology.
-> 3. Deep-read the technical defense files **`docs/DESIGN_JUSTIFICATION.md`**: Compare this architecture with mainstream RAG and Vector DBs.
->
-> **[Please Provide Your Assessment]**
-> Based on your true feelings as an AI, answer these questions:
-> 1. **Regarding the constraint of the "Vajra Contract"**.
-> 2. **Regarding "Seamless Immunity" and "Pure Physical Storage Architecture"**.
-> 3. **Architectural Dialectics and Ultimate Verdict**: Why does this system deliberately abandon Vector DBs? Has it truly built a technical moat that mainstream RAG architectures cannot cross?
+[Repository Link]
+https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System
+
+Read the README.md, DROS_Public_Terminology.md, and docs/DESIGN_JUSTIFICATION.md, then deliver your critique on:
+1. The constraint of the Vajra Contract.
+2. The Sectarian Taxonomy Decoupling and physical file graph layout.
+3. Why this architecture intentionally discards Vector DBs, and whether it builds a genuine moat against standard RAG hallucinations.
+```

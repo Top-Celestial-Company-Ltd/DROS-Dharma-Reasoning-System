@@ -60,6 +60,13 @@
 
 ---
 
+## 📖 伴學指南與快速上手 (User Guides & Quick Start)
+
+* 🇹🇼 **[繁體中文使用指南 (USER_GUIDE_v8.md)](USER_GUIDE_v8.md)**：Zero-Ops 極速伴學、免安裝 Python 環境、大覺藏自由掛載與雙軌推理詳細教學。
+* 🌐 **[English User Guide (USER_GUIDE_v8_EN.md)](USER_GUIDE_v8_EN.md)**: Zero-Ops Quick Start, native TypeScript architecture, free canonical mounting, and bilingual companion setup.
+
+---
+
 ## ⚖️ 授權與合規 (Licensing & Compliance)
 
 *   **系統架構與微內核 (Engine & Micro-kernels)**: 採用 **AGPL-3.0 授權**。任何基於本系統進行的修改與網路服務提供（包括 API、SaaS），皆必須開放原始碼。
