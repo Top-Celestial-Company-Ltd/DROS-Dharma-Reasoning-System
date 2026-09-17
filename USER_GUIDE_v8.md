@@ -58,7 +58,9 @@
 
 ## 📱 手機端 (iOS / Android) 專屬快速安裝指南
 
-手機端（iOS/Android）與 PC 電腦端在載入方式上有微小差異。手機版 **無需安裝 Python 環境**，只需透過 API 直連即可達成「三藏隨身帶著走」！
+> 💡 **重要設備提醒（手機用戶請勿下載 `.exe` 檔）**：  
+> `.exe` 是微軟 Windows 電腦專用的安裝執行檔，**手機（蘋果 iPhone/iPad 或安卓 Android）無法直接執行 `.exe`**。  
+> 手機用戶請直接透過手機官方應用商店（App Store / Google Play）免費安裝官方的 **Obsidian App**，再匯入佛堂資料夾即可。手機端同樣為**純 TypeScript/Zero-Ops 架構，完全免安裝 Python**，隨開即用！
 
 ### 📲 步驟 1：匯入 DROS 知識庫至手機
 * **Android 使用者**：

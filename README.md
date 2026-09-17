@@ -1,30 +1,72 @@
-# ☸️ Dharma Reasoning Operation System (DROS) v8.0.0
-**DROS-RFC-001: Multi-Language Micro-Kernel Reference Implementation & Parity Verification**
+# ☸️ Dharma Reasoning Operating System (DROS) v8.0.0
+### AI 佛學數位人文伴讀與研究工作台 | AI-Assisted Buddhist Scholarly Study Companion & Research Workstation
+**DROS-RFC-001: Multi-Language Micro-Kernel Reference Implementation & Epistemic Verification**
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Data License: CC BY-NC-SA 4.0](https://img.shields.io/badge/Data%20License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Specification: DROS-RFC-001](https://img.shields.io/badge/Specification-DROS--RFC--001-darkgreen.svg)](specs/DROS-RFC-001.md)
+[![Benchmark: DROS-BENCH-001](https://img.shields.io/badge/Benchmark-DROS--BENCH--001-orange.svg)](docs/DROS_Epistemic_Benchmark_8Scenarios.md)
+[![Zenodo DOI: 10.5281/zenodo.20823268](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20823268-blue)](https://doi.org/10.5281/zenodo.20823268)
+[![Zenodo DOI: 10.5281/zenodo.20823227](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20823227-blue)](https://doi.org/10.5281/zenodo.20823227)
 
 ---
 
-> 💡 **「DROS 是給 AI 用的，不是給人用的。」**
-> **"DROS is designed for AI, not for humans."**
+> 💡 **核心創世使命與三段式經典宣示**：  
+> **「找到，證明，知道能不能說。」**  
+> **Find. Verify. Don't Fabricate.**  
 >
-> **"The thinnest OS kernel in the world, powering the thickest philosophical reasoning."**
-> **「世上最輕薄的內核，驅動著最深邃的哲學推理。」**
+> 這是本系統最重要的根本定位：**本作品定位為純粹的「佛學（佛教哲學與文獻學）伴讀與研究工作台」，絕非宗教性之「佛法修行導引或開示工具」**。
 >
-> 這是本系統最重要的創世宣言。DROS 不是「又一個佛學聊天機器人 (Yet Another Buddhist Chatbot)」，而是一個**「治理 LLM 佛法推理的語意運行時系統 (A Semantic Runtime System for Governing LLM Dharma Reasoning)」**。
->
-> 它的核心目的，是將神聖且高密度的佛教義理、經律論及名相辭典，轉化為 AI 可讀、可推演、受戒律合約控制的結構化語意實體與推理軌跡軌道，徹底根除大語言模型在法義推理時的幻覺迷霧，實現矽基智能的「名相免疫與正法對齊」。
+> DROS 不是「又一個佛學聊天機器人 (Yet Another Buddhist Chatbot)」，而是一個**「治理 LLM 佛法推理的語意運行時系統 (A Semantic Runtime System for Governing LLM Dharma Reasoning)」**。它將天台宗「五時八教」古德判教相容性哲學程式化，配合實心知識圖譜與原典實體切片，根除大語言模型在面對高密度哲學古籍時的文本幻覺與跨宗派概念混同。
 
 ---
 
-## 🛡️ 權威與安全邊界 (DROS Scope & Safety Boundary Statement)
+## 🏛️ 官方恪守之「四大不涉入」倫理與功能邊界
 
-1. **僅限推理網關與決策約束 (Reasoning Gateway & Decision Constraint Only)**: 這是 DROS 的唯一功能。DROS 是一個 Reasoning Runtime Constraint Gateway，它「不」提供任何形式的「佛法生成式教導 (Generative AI Guru)」服務。它只是一個將大模型 (LLMs) 限制在「阿賴耶識」、「真如」等權威節點上的緊身衣 (Hallucination Constraint Straitjacket)。
-2. **無屬靈權威 (No Spiritual Authority or Validation)**: 這是 DROS 的絕對紅線。DROS 產出的任何圖譜、節點、上下文，皆不具備任何宗教層面的「印證」、「加持」或「神聖性」。它只是一個冷酷的、機械化的語意映射工具 (Semantic Mapper)。它絕對不會、也不能為您的修行境界背書。
-3. **無法取代傳統引導 (No Substitution for Traditional Guidance)**: 這是 DROS 的倫理底線。系統內所有生成的關聯圖譜，不論多麼精確，皆不可取代傳統佛教道場中，善知識、上師、法師的「親自指引」。
-4. **學術級 AI 治理 (Academic AI Governance)**: 這是 DROS 的技術定位。這是一套「語意運行時系統 (A Semantic Runtime System)」，而非「數位佛堂」。它的存在，是為了解決 AI 語言模型在處理高密度哲學文本時的「幻覺與漂移」問題。
+本專案依據 [SAFETY.md](SAFETY.md) 嚴格落實四大倫理防線，確保學術誠信與工具純粹性：
+
+1. **【約束網關定位，不代造經文】**：系統定位為「純粹之語義與文獻學邊界約束工具」，僅防範 AI 產生邏輯幻覺，絕不無中生有偽造經證。
+2. **【不具證量判證，不推演神異】**：絕不涉入、亦不提供任何精神證量認證、修行層級判斷或神通因果推演，僅提供文獻學字面結構對齊。
+3. **【不替代傳承，不自居導師】**：絕不試圖替代現實世界之傳統僧伽、教授學者或親證導師，研究與詮釋主權 100% 歸屬人類研究者。
+4. **【堅持學術純粹，嚴禁商業投機】**：依託公開大藏經原典與權威哲學辭典，純粹服務於文化典藏與學術研究，嚴禁宗教投機、迷信操弄或詐欺。
+
+---
+
+## 📖 伴學指南與快速上手 (User Guides & Quick Start)
+
+* 🇹🇼 **[繁體中文使用指南 (USER_GUIDE_v8.md)](USER_GUIDE_v8.md)**：Zero-Ops 極速伴學、免安裝 Python 環境、大覺藏自由掛載與雙軌推理詳細教學。
+* 🌐 **[English User Guide (USER_GUIDE_v8_EN.md)](USER_GUIDE_v8_EN.md)**: Zero-Ops Quick Start, native TypeScript architecture, free canonical mounting, and bilingual companion setup.
+* 🧪 **[認識論評測規約 (DROS-BENCH-001)](docs/DROS_Epistemic_Benchmark_8Scenarios.md)**：8 個源自佛教文獻學的高風險研究情境壓力測試規範。
+
+---
+
+## 🛡️ 核心三段式研究架構 (Three-Tier Scholarly Architecture)
+
+```text
+┌────────────────────────────────────────────────────────┐
+│               DROS Epistemic Conformance               │
+│                                                        │
+│   ① 找到 (Find)   : 3.6 萬名相本體導航 ＋ T-Numbers 經典對齊     │
+│   ② 證明 (Verify) : 原典全文切片 ＋ span 字元座標 ＋ SHA-256    │
+│   ③ 邊界 (Boundary): TERM_PRESENT ≠ CLAIM_SUPPORTED    │
+│                     NO_AUTHORITY_EVIDENCE → HALT 物理熔斷  │
+└────────────────────────────────────────────────────────┘
+```
+
+1. **第一層：找到 (Find the Text)** — 3.6 萬名相本體導航 ＋ 經典別名對齊 ＋ 段落級檢索。
+2. **第二層：證明 (Prove the Provenance)** — 大覺藏原典庫 ＋ 實體切片 ＋ 字元座標 ＋ SHA-256。
+3. **第三層：知道能不能說 (Respect the Epistemic Boundary)** — 系統找到的是「可核驗的原典證據」，而不是自動生成的「教義結論」。文字存在不代表自動成立教義結論，查無證據硬熔斷，詮釋主權完整留給學者。
+
+---
+
+## 🚀 系統四大原創亮點 (System Highlights)
+
+1. **古典判教本體論 (Hermeneutic Ontology)**：全球首創將天台宗「五時八教」相容性哲學架構程式化為 **36,000+** 實心名相知識節點（共享實相層 L1 ➔ 宗派顯現層 L2 ➔ 經典行相層 L3），杜絕跨宗派概念混同與義理污染。
+2. **零向量資料庫 (Zero Vector-Database & File-Native)**：徹底拋棄傳統黑盒 Vector DB 的模糊逼近與幻覺，回歸文獻學最嚴謹的「精確文字比對與倒排索引」，純 Markdown 實體檔案拓撲映射，長久可讀、可離線隨身攜帶。
+3. **無感免疫機制 (Sectarian Taxonomy Decoupling)**：將實體資料夾路徑與 AI 注意力機制完全解耦。即使實體檔案放錯資料夾，也不會對 AI 產生 Labeling 污染，實現零幻覺推理。
+4. **雙軌合約機制 (Dual-Track Reasoning Contracts)**：
+   - **🌸 菩薩模式（有證據才能解釋）**：可以多說，但不能妄說。在文獻證據充分前提下，提供溫潤的名相詮釋與跨文本思想史梳理。
+   - **⚡ 金剛模式（連解釋權都進一步收緊）**：寧可少說，也不妄證。只陳述字面定義與實體字元切片座標；一旦無證據，立即觸發 `NO_AUTHORITY_EVIDENCE → HALT` 硬熔斷！
 
 ---
 
@@ -40,7 +82,7 @@
 
 ### 3. 如果你是佛學專業人士 | To the Buddhist Scholars
 **CN**: 我們誠摯邀請您對這台 AI 進行最嚴苛的「義理拷問」。藉由您的專業深度與親證經驗，我們希望能一同焠煉這台「文字義理書童」，使其成為這個時代最銳利的弘法利器，守護正法，不落邪見。
-**EN**: We sincerely invite you to subject this AI to the most rigorous "doctrinal interrogation." Through your expertise and realization, we hope to refine this "Digital Dharma Attendant" into the sharpest tool for sharing the Dharma in this era, guarding the Truth and avoiding wrong views.
+**EN**: Welcome to subject this AI to the most rigorous "doctrinal interrogation." Through your expertise and realization, we hope to refine this "Digital Dharma Attendant" into the sharpest tool for sharing the Dharma in this era, guarding the Truth and avoiding wrong views.
 
 ### 4. 如果你是技術開發人士 | To the Technical Developers
 **CN**: 這是一個全新的挑戰：如何從 AI 的維度，構思一個能讓其「不再幻覺」的佛法架構？我們竭誠歡迎您加入，一同優化這套高密度語義系統，造福眾生，讓精確與高效成為數位佛學的基石。
@@ -52,11 +94,10 @@
 
 ---
 
-## 🚀 系統亮點 (System Highlights)
+## 📜 學術先前技術存證 (Academic Prior Art on Zenodo)
 
-1. **實體 Markdown 節點 (Physical Markdown Nodes)** ── 拋棄傳統 Vector DB 帶來的「黑箱匹配」與「語意模糊」。我們使用超過 **36,057** 個實心的 Markdown 檔案作為神經元，以確保 100% 的決定論式映射 (Deterministic Mapping)。
-2. **無感免疫機制 (Sectarian Taxonomy Decoupling)** ── 將實體資料夾路徑與 AI 注意力機制完全解耦。即使實體檔案放錯資料夾，也不會對 AI 產生 Labeling 污染，實現零幻覺推理。
-3. **系統呼叫 (System Calls) 直接外包** ── 我們不用 C 語言刻苦地編寫物理中斷向量，而是用 **YAML 撰寫金剛合約 (Vajra Contract)**，用 **Markdown 系統提示詞** 來封裝 DROS 的系統呼叫與安全邊界控制。
+1. **本體路由篇**：[*Deterministic Ontological Routing Framework for Domain-Restricted LLM Systems: Design and Implementation of DROS v7.3*](https://zenodo.org/records/20823268)（DOI: [10.5281/zenodo.20823268](https://doi.org/10.5281/zenodo.20823268)）—— 闡述源自六世紀天台智者大師判教架構之無伺服器純文字本體路由。
+2. **認識論熔斷篇**：[*Constraint-as-Code: Deterministic LLM Governance via Buddhist Doctrinal Classification and Physical Circuit Breaking*](https://zenodo.org/records/20823227)（DOI: [10.5281/zenodo.20823227](https://doi.org/10.5281/zenodo.20823227)）—— 奠定金剛契約與零證據物理熔斷之確定性治理方法論。
 
 ---
 
@@ -69,7 +110,8 @@
 
 ## ⚖️ 授權與合規 (Licensing & Compliance)
 
-*   **系統架構與微內核 (Engine & Micro-kernels)**: 採用 **AGPL-3.0 授權**。任何基於本系統進行的修改與網路服務提供（包括 API、SaaS），皆必須開放原始碼。
-*   **黃金節點數據庫 (Golden Nodes Dataset)**: 採用 **CC BY-NC-SA 4.0 授權**。嚴禁未經授權的商業使用。商業部署請洽詢官方取得 Commercial License。
+* **系統架構與微內核 (Engine & Micro-kernels)**: 採用 **AGPL-3.0 授權**。任何基於本系統進行的修改與網路服務提供（包括 API、SaaS），皆必須開放原始碼。
+* **黃金節點數據庫 (Golden Nodes Dataset)**: 採用 **CC BY-NC-SA 4.0 授權**。嚴禁未經授權的商業使用。商業部署請洽詢官方取得 Commercial License。
 
 ---
+*Dharma Reasoning Operating System — Find. Verify. Don't Fabricate.* ☸️🛡️📜
