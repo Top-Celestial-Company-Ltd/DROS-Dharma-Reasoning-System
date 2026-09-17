@@ -372,6 +372,14 @@ async function getLocalNodeContent(app, coreNodes, relatedNodes) {
             let score = 0;
             if (cleanBasename.includes(cleanTarget) || cleanTarget.includes(cleanBasename)) {
                 score = 0.8;
+                // 正典優先加權：若包含 疏文斷句、藏要、大正藏 原典，優先級最高
+                if (cleanBasename.includes('疏文斷句') || cleanBasename.includes('藏要') || path.includes('01-大正藏') || path.includes('06-菩薩藏')) {
+                    score += 0.3;
+                }
+                // 排除長篇講記與口述作為首選原典
+                if (cleanBasename.includes('講記') || cleanBasename.includes('長老-') || cleanBasename.includes('演培') || cleanBasename.includes('研習')) {
+                    score -= 0.2;
+                }
             }
             let intersection = 0;
             const setBasename = new Set(cleanBasename.split(""));
@@ -389,10 +397,14 @@ async function getLocalNodeContent(app, coreNodes, relatedNodes) {
         }
         return bestFile;
     };
+    const readFilesSet = new Set();
     const readAndProcessFile = async (file, isCore) => {
         try {
-            // 全域累積容量上限看門狗，避免多個節點疊加時撐爆 token 上限
-            if (totalLen > 30000) {
+            if (readFilesSet.has(file.path))
+                return; // 嚴格去重，絕不重複載入同一經典
+            readFilesSet.add(file.path);
+            // 全域累積容量上限提升至 60,000 字，滿足多典大對勘
+            if (totalLen > 60000) {
                 console.log(`[!] Context Watchdog: Skip reading node due to global token budget limit (totalLen > 30000): ${file.basename}`);
                 return;
             }
@@ -629,9 +641,29 @@ async function queryDrosEngine(query, contractId, customPromptContent, lang, app
                 console.log("[Dros Core] 無 Gemini API Key，跳過 Stage 1 路由，直接進行全庫定錨。");
             }
         }
+        // DROS 智慧經典與法義實體提取器
+        const extractedEntities = [];
+        const bookMatches = query.match(/《([^》]+)》/g);
+        if (bookMatches) {
+            bookMatches.forEach(b => {
+                const cleanB = b.replace(/[《》]/g, '').trim();
+                extractedEntities.push(cleanB);
+                if (cleanB.endsWith('經') || cleanB.endsWith('論') || cleanB.endsWith('疏')) {
+                    extractedEntities.push(cleanB.slice(0, -1));
+                }
+            });
+        }
+        const canonList = ['楞伽', '起信', '中論', '佛性', '唯識', '解深密', '金剛', '圓覺', '維摩', '法華', '華嚴', '如來藏', '阿賴耶', '真如', '二諦', '龍樹', '無著', '世親'];
+        canonList.forEach(c => {
+            if (query.includes(c) && !extractedEntities.includes(c)) {
+                extractedEntities.push(c);
+            }
+        });
+        const queryCandidates = [...extractedEntities, ...(plan.core_nodes || []), ...(plan.related_nodes || [])];
+        console.log('[DROS JS Engine] Extracted Query Candidates:', JSON.stringify(queryCandidates));
         let context = "";
         try {
-            context = await getLocalNodeContent(app, plan.core_nodes || [], plan.related_nodes || []);
+            context = await getLocalNodeContent(app, queryCandidates, plan.related_nodes || []);
         }
         catch (e) {
             console.error("[DROS JS Engine] Node ingestion failed:", e);
@@ -664,7 +696,7 @@ async function queryDrosEngine(query, contractId, customPromptContent, lang, app
                 if (hasStrongAuthority) {
                     runtimeMode = contractData.InferenceMode || "Bodhisattva";
                     temperature = contractData.Temperature !== undefined ? contractData.Temperature : 0.2;
-                    if (contractData.Model)
+                    if (contractData.Model && effectiveSettings.engineMode !== "custom")
                         modelToUse = contractData.Model;
                 }
                 else {
@@ -1222,7 +1254,7 @@ class DrosCopilotPlugin extends obsidian_1.Plugin {
         if (mode === "en")
             return "EN";
         try {
-            const obsLang = (window.localStorage.getItem("language") || "en").toLowerCase();
+            const obsLang = (0, obsidian_1.getLanguage)().toLowerCase();
             if (obsLang.includes("zh")) {
                 return "ZH";
             }
@@ -1257,7 +1289,6 @@ class DrosCopilotPlugin extends obsidian_1.Plugin {
         this.addCommand({
             id: 'dros-quick-lookup',
             name: 'DROS：就地義理定錨與查詢 / Doctrinal Anchoring',
-            hotkeys: [{ modifiers: ["Alt"], key: "d" }],
             editorCallback: async (editor, view) => {
                 const selectedText = editor.getSelection().trim();
                 // 動態獲取當前語言
@@ -1346,7 +1377,7 @@ class DrosCopilotPlugin extends obsidian_1.Plugin {
     }
     async activateView() {
         this.app.workspace.detachLeavesOfType(VIEW_TYPE_DROS_CHAT);
-        await this.app.workspace.getRightLeaf(false).setViewState({
+        await this.app.workspace.getLeaf(true).setViewState({
             type: VIEW_TYPE_DROS_CHAT,
             active: true,
         });
