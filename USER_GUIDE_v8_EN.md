@@ -22,7 +22,7 @@
 
 > [!NOTE]
 > **📦 Lightweight Core vs. Full Vault**
-> The default `core/` directory already includes the "General Cycle" and various topics, comprising roughly **28 core Mahayana and Sravakayana original texts (1,193 volumes in total)**, paired with **32,000+ terminological nodes** acting as the foundation of Buddhist doctrine. This is extremely lightweight and sufficient for daily study, making it **perfect for cloud syncing and carrying on Obsidian Mobile**.
+> The default `core/` directory already includes the "General Cycle" and various topics, comprising roughly **28 core Mahayana and Sravakayana original texts (1,193 volumes in total)**, paired with **36,000+ terminological nodes** acting as the foundation of Buddhist doctrine. This is extremely lightweight and sufficient for daily study, making it **perfect for cloud syncing and carrying on Obsidian Mobile**.
 > 
 > Conversely, the complete "Mahabodhi Pitaka" is over **1.6GB**. If you are an advanced researcher or wish to query the entirety of the Pitaka, please download the full version and place it in the `Vault_DajueZang/` folder to **"Mount it freely"**!
 
@@ -100,7 +100,7 @@ DROS v8.0 introduces groundbreaking performance optimization and automated minin
 ### 1. Zero-Ops Default Mode —— 【Highly Recommended】
 The simplest, most foolproof mode. Ready out-of-the-box, no Python background server required.
 - **Setup**: Paste your Google AI Studio Key into the `Gemini API Key` field.
-- **Mechanism**: The plugin uses its built-in WebAssembly engine and the **complete 32,000+ terminology database** to connect directly to the Google API.
+- **Mechanism**: The plugin uses its built-in WebAssembly engine and the **complete 36,000+ terminology database** to connect directly to the Google API.
 - **License Restriction**: Strictly prohibited from unauthorized commercial use (CC BY-NC-SA 4.0).
 
 ### 2. Geek Developer Mode (Local Proxy Mode)
