@@ -5,7 +5,10 @@
 > **"Simplicity is the ultimate sophistication. By empowering the Obsidian ecosystem, DROS brings sovereign reasoning straight to the行者's fingertips."**  
 > ── 康宸園有限公司/Jimmy Chen
 
-本藍圖旨在為 **DROS Doctrinal Copilot (DROS 義理書僮)** 官方 Obsidian 插件提供完整的架構設計、核心 TypeScript 接口規格、Svelte 側邊欄組件樣式、以及從「本地 API 橋接」到「純本地 WASM 零依賴引擎」的兩階段開發路線圖。
+> 💡 **現役架構發布標註 (Production Note)**：  
+> 本文件記錄了 DROS Copilot 從初期 Local Proxy 原型到終局純本地架構的藍圖設計。**目前外掛已全面實現第二階段「純 TypeScript / 零依賴原生架構 (v1.0.9)」**，內建原典內文滑動對齊穿透引擎、雙向鏈結跳轉與直連模式，一般伴學使用者已無需配置本機 Python 代理。
+
+本藍圖記錄了 **DROS Doctrinal Copilot (DROS 義理書僮)** 官方 Obsidian 插件的架構設計、核心 TypeScript 接口規格、Svelte 側邊欄組件樣式、以及從「本地 API 橋接」到「純本地 WASM 零依賴引擎」的兩階段開發路線圖。
 
 ---
 

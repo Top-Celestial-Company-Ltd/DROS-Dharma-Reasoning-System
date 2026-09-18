@@ -1,11 +1,11 @@
-# 🏛️ DROS 7.2 設計極限與戰略防禦白皮書 (Design Limitations & Strategic Defense)
+# 🏛️ DROS v8.0.0 設計極限與戰略防禦白皮書 (Design Limitations & Strategic Defense)
 
 ## 架構權衡與無資料庫（Serverless Flat-File）典範的邊界白皮書
 
 > **"Every architectural decision is a series of trade-offs. Knowing where your system breaks is the ultimate signature of a senior software architect."**  
 > ── 康宸園有限公司/Jimmy Chen
 
-在現代軟體工程中，沒有任何一種架構是完美的「萬靈丹（Silver Bullet）」。DROS (Deterministic Runtime OS) 7.2 採取了完全相反的降維打擊策略 ── **「無資料庫（Serverless Flat-File）與語義記憶體映射」**。
+在現代軟體工程中，沒有任何一種架構是完美的「萬靈丹（Silver Bullet）」。DROS (Deterministic Runtime OS) v8.0 採取了完全相反的降維打擊策略 ── **「無資料庫（Serverless Flat-File）與語義記憶體映射」**。
 
 本白皮書旨在從現代計算機科學、物理 I/O、併發安全與軟體維運生命週期等多維度，冷酷剖析本系統的設計極限，呈現主流資料庫領域可能提出的技術批判，並給出 DROS 的戰略防禦防線。
 
@@ -13,11 +13,11 @@
 
 ## 🛑 一、 主流資料庫技術之極致批判 (The DBMS Critique)
 
-如果讓一位頂級的傳統資料庫核心工程師（例如 PostgreSQL 核心貢獻者）或分散式系統專家來評估 DROS 7.1 的無資料庫架構，他們會聚焦在以下 **5 大核心面向**進行最精準且致命的批判：
+如果讓一位頂級的傳統資料庫核心工程師（例如 PostgreSQL 核心貢獻者）或分散式系統專家來評估 DROS 的無資料庫架構，他們會聚焦在以下 **5 大核心面向**進行最精準且致命的批判：
 
 ### 1. 記憶體容量天花板 (RAM-Bound Capacity Ceiling)
 *   **批判內容**：
-    > *「DROS 的 $O(1)$ 內存定錨完全是拿 RAM 的物理空間換取時間。這在 1.6 萬個節點（約 100MB）時跑得很漂亮，但如果大覺藏規模擴展到 1,000 萬個節點，你的內存直接爆掉。這完全不具備 Scale-out（水平擴展）的彈性！」*
+    > *「DROS 的 $O(1)$ 內存定錨完全是拿 RAM 的物理空間換取時間。這在 3.6 萬個節點（約 100MB）時跑得很漂亮，但如果大覺藏規模擴展到 1,000 萬個節點，你的內存直接爆掉。這完全不具備 Scale-out（水平擴展）的彈性！」*
 *   **技術缺陷**：
     *   DROS 在啟動時會執行一次性全量內存索引預熱（In-Memory Graph Indexing）。數據規模與 RAM 佔用呈線性正相關（$O(N)$ 記憶體複雜度）。
     *   傳統資料庫（如 PostgreSQL）採用 Buffer Pool（緩衝池）與數據分頁（Paging）機制，配合 B-Tree 索引，可以在僅有 8GB RAM 的伺服器上查詢 2TB 的硬碟數據，因為它只把當下需要的頁面載入記憶體。DROS 無法做到這一點，DROS 的數據量極限直接受限於伺服器的實體記憶體大小。

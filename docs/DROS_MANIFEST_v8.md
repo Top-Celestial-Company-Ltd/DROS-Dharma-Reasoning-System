@@ -1,6 +1,6 @@
-# 📜 DROS 7.0 Nirvana Edition - 系統清單 (System Manifest)
-> 產出時間: 2026-06-19 10:12
-> 系統狀態: **LOCKED / NIRVANA**
+# 📜 DROS v8.0.0 Epistemic Edition - 系統清單 (System Manifest)
+> 產出時間: 2026-07-21 (基線鎖定) / 2026-09-18 (v8.0.0 Zero-Ops Release 凍結)
+> 系統狀態: **LOCKED / EPISTEMIC EDITION (36,057 NODES BASELINE)**
 
 ---
 

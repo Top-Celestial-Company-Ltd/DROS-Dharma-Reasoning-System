@@ -1,6 +1,9 @@
 # 📿 DROS Micro-kernel Standard Specification
 ## DROS-RFC 001: Unified Multi-Language µDROS Core Architecture
 
+> **專利聲明：** DROS 執行治理與安全技術已申請美國臨時專利保護（U.S. Patent Application No. 64/111,973，Patent Pending）。  
+> **Patent Notice:** DROS execution governance and security technology is protected under U.S. Provisional Patent Application (U.S. PPA No. 64/111,973, Patent Pending).
+
 > **"One Specification to rule them all, One Manifest to bind them, One Topology to bring them all, and in the Offline Reasoning shine them."**  
 > ── DROS Core Architects (Jimmy Chen & Antigravity)
 
