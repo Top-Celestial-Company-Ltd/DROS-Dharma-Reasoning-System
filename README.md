@@ -13,9 +13,9 @@
 
 ### 📥 立即下載 DROS v8.0 開箱即用筆記庫 (Ready-to-Use Vault)
 > **🚀 Zero-Ops 免環境配置・手機 / 平板 / 電腦全平台通用**  
-> 內建 28 部大乘核心原典 ＋ 36,000+ 佛學名相節點 ＋ DROS Doctrinal Copilot v1.0.9 伴讀外掛（預設自動啟用）：  
-> 📦 **[👉 點此一鍵下載 DROS-Core-Vault-v8.0.zip (約 104MB)](https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System/releases/download/v8.0.0/DROS-Core-Vault-v8.0.zip)**  
-> *(手機 iOS / Android 或電腦 Windows / macOS / Linux 下載解壓縮後，打開 Obsidian 點選「開啟資料夾作為保管庫」，伴讀書僮立刻啟動！)*
+> 內建 28 部大乘核心原典 ＋ 36,000+ 佛學名相節點 ＋ **雙外掛預先配置**（DROS Doctrinal Copilot v1.0.9 伴讀外掛 ＋ Force Read Mode 義理原典防誤觸唯讀外掛，預設自動啟用）：  
+> 📦 **[👉 點此一鍵下載 DROS-Core-Vault-v8.0.zip (約 394MB)](https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System/releases/download/v8.0.0/DROS-Core-Vault-v8.0.zip)**  
+> *(手機 iOS / Android 或電腦 Windows / macOS / Linux 下載解壓縮後，打開 Obsidian 點選「開啟資料夾作為保管庫」，原典名相自動唯讀保護，伴讀書僮立刻啟動！)*
 >
 > 📦 **輕量核心與完整大覺藏 (Core vs. Full Vault)**  
 > 系統預設的 `core/` 已經內建「總輪」及各主題，共收錄約 **28 部核心大乘與聲聞原典，總卷數達 1,193 卷**，並搭配 **3.6 萬+ 個名相節點 (36,000+ Nodes)** 作為佛學義理的基礎骨架。這已經足以涵蓋日常的佛學義理學習，且體積極度輕量，**非常適合在手機版 Obsidian 進行雲端同步與隨身攜帶**。  

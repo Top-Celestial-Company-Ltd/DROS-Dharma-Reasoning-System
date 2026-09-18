@@ -39,12 +39,12 @@
 2. **Prepare API Key**: Go to [Google AI Studio](https://aistudio.google.com/) to obtain a free Gemini API Key (OpenRouter and DeepSeek custom endpoints are also supported).
 3. **Load DROS Vault**: Open Obsidian, select **"Open folder as vault"**, and point it to this extracted project folder.
    - *(Optional Canonical Mounting)*: If you need to perform deep canonical textual criticism, you can download the complete 1.6GB Mahabodhi Pitaka from the [Official Download Site](https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z) and place it into `Vault_DajueZang/`. The TS plugin natively penetrates and extracts exact passage coordinates in milliseconds.
-4. **Enable Exclusive Chat Plugin (🔑 CRITICAL STEP)**:
-   - In the Obsidian interface, click "Settings (⚙️ Gear icon)" -> select "Community plugins" on the left menu.
-   - If using Community Plugins for the first time, click **"Turn off Restricted Mode"**.
-   - Click **"Browse"**, and type **`DROS Doctrinal Copilot`** in the search bar.
-   - Click **"Install"** and then **"Enable"**!
-   - Click the ⚙️ Gear icon next to the plugin name, keep `Engine Mode` set to **Direct Mode (Zero-Ops)**, and paste your Gemini API Key.
+4. **Pre-Installed Plugins (Pre-configured & Enabled by Default)**:
+   - This release package comes **pre-configured with two essential plugins**:
+     1. **`DROS Doctrinal Copilot`**: AI doctrinal companion and scripture penetration engine.
+     2. **`Force Read Mode`**: Canonical read-only protection plugin (automatically locks `core/**` and `Vault_DajueZang/**` into reading view to prevent accidental edits during study).
+   - If importing manually: Enter Obsidian "Settings (⚙️)" ➔ "Community plugins", turn off restricted mode, and verify both plugins are enabled.
+   - Click the ⚙️ Gear icon next to DROS Copilot, enter your Gemini API Key (or OpenRouter / DeepSeek key) to begin.
 5. **Begin Doctrinal Exploration**:
    - Click the **🪷 Dharma Chakra Icon** in the sidebar to open the chat window and start your zero-hallucination Dharma dialogue!
 

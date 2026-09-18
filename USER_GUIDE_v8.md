@@ -41,12 +41,12 @@
 2. **準備 API Key**: 請至 [Google AI Studio](https://aistudio.google.com/) 免費申請您的 Gemini API Key（亦支援 OpenRouter、DeepSeek 等自訂 API）。
 3. **載入 DROS 知識庫**: 打開 Obsidian，選擇「開啟資料夾作為儲存庫 (Open folder as vault)」，指向您下載解壓縮後的本專案資料夾。
    - *(可選自由掛載)*：若您需要進行全藏深入校勘，可前往 [大覺藏官方高速下載站點](https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z) 下載 1.6GB 完整大覺藏集，解壓縮後直接放入 `Vault_DajueZang/` 即可，TS 外掛會在查詢時自動以毫秒級速度原生穿透！
-4. **啟用專屬對話外掛 (🔑 關鍵步驟)**:
-   - 進入 Obsidian 介面，點擊左下角的「設定 (⚙️ 齒輪圖示)」 -> 點選左側選單的「社群外掛程式 (Community plugins)」。
-   - 若為首次使用，請點擊 **「關閉限制模式 (Turn off Restricted Mode)」**。
-   - 點擊 **「瀏覽 (Browse)」** 按鈕，在搜尋列輸入 **`DROS Doctrinal Copilot`**。
-   - 點擊 **「安裝 (Install)」** 並點擊 **「啟用 (Enable)」**！
-   - 點擊該外掛名稱旁邊的 ⚙️ 齒輪圖示（或點擊左側選單最下方的 DROS Copilot 設定），將 `Engine Mode` 保持為預設的 **Zero-Ops 直連模式 (Direct Mode)**，並填入您的 Gemini API Key。
+4. **預裝專屬外掛（已預裝預設啟用，亦可手動配置）**:
+   - 本發行包已為您**預先安裝並配置好兩大核心外掛**：
+     1. **`DROS Doctrinal Copilot`**：AI 義理伴學書僮與原典穿透引擎。
+     2. **`Force Read Mode`**：原典與核心名相唯讀保護外掛（自動鎖定 `core/**` 與 `Vault_DajueZang/**`，防範滑動或閱讀時不小心改動到名相檔案）。
+   - 若為自行複製檔案的使用者：進入 Obsidian「設定 (⚙️)」➔「社群外掛程式 (Community plugins)」，關閉限制模式，確保上述外掛已啟用。
+   - 點擊 DROS Copilot 旁的 ⚙️ 齒輪圖示，填入您的 Gemini API Key（或 OpenRouter / DeepSeek 金鑰）即可開始使用。
 5. **開始法義伴學**:
    - 點擊 Obsidian 介面左側功能列的 **🪷 輪寶圖標 (Dharma Chakra Icon)** 即可展開右側對話伴學視窗，即刻享受零幻覺的義理對話！
 
