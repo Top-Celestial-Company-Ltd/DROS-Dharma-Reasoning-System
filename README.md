@@ -16,6 +16,11 @@
 > 內建 28 部大乘核心原典 ＋ 36,000+ 佛學名相節點 ＋ DROS Doctrinal Copilot v1.0.9 伴讀外掛（預設自動啟用）：  
 > 📦 **[👉 點此一鍵下載 DROS-Core-Vault-v8.0.zip (約 104MB)](https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System/releases/download/v8.0.0/DROS-Core-Vault-v8.0.zip)**  
 > *(手機 iOS / Android 或電腦 Windows / macOS / Linux 下載解壓縮後，打開 Obsidian 點選「開啟資料夾作為保管庫」，伴讀書僮立刻啟動！)*
+>
+> 📦 **輕量核心與完整大覺藏 (Core vs. Full Vault)**  
+> 系統預設的 `core/` 已經內建「總輪」及各主題，共收錄約 **28 部核心大乘與聲聞原典，總卷數達 1,193 卷**，並搭配 **3.6 萬+ 個名相節點 (36,000+ Nodes)** 作為佛學義理的基礎骨架。這已經足以涵蓋日常的佛學義理學習，且體積極度輕量，**非常適合在手機版 Obsidian 進行雲端同步與隨身攜帶**。  
+>  
+> 相對地，完整的「大覺藏集」高達 **1.6GB 以上**。若您是佛學深究者，或是想完整查閱所有大覺藏集內容的使用者，歡迎您自行下載完整版，並將其放入根目錄預留之 `Vault_DajueZang/` 資料夾中進行**「自由掛載」**（內附標準存放拓撲說明，TS 外掛會在查詢時自動以毫秒級速度原生穿透）！
 
 ---
 
