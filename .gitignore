@@ -57,8 +57,33 @@ deleted_nodes_manifest.json
 # Local scripture vault (exclude scripture contents, keep folder and mounting guide)
 Vault_DajueZang/*
 !Vault_DajueZang/READ_ME_大覺藏原典掛載指南.md
+!Vault_DajueZang/大覺藏存放說明.md
 .graphify_cache.pkl
 .smtcmp_vector_db.tar.gz
 00_黃金索引庫/
 push_release.bat
+
+# Exclude Developer Tools, Pipelines & Staging (Vault-Only Repository)
+inbox/
+proxy/
+scripts/
+specs/
+src/
+tools/
+*.py
+*.bat
+*.sh
+*.ps1
+pyproject.toml
+requirements.txt
+MANIFEST.in
+
+# Confidential & Proprietary IP Protections
+*confidential*
+*Confidential*
+*proprietary*
+*PROPRIETARY*
+*.secret
+*.key
+*.pem
 
