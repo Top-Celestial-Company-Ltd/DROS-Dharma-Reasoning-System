@@ -41,8 +41,7 @@ $RECYCLE.BIN/
 .obsidian/workspace-mobile.json
 .obsidian/backups/
 .obsidian/plugins/hotkeys.json
-.obsidian/plugins/*/data.json
-**/data.json
+.obsidian/plugins/dros-doctrinal-copilot/data.json
 *.local.json
 .env*
 .knowledge_bridge_cache.pkl
