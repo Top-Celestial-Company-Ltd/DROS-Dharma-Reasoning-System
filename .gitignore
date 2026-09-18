@@ -55,8 +55,9 @@ docs/archive/
 zhii_para_map.json
 deleted_nodes_manifest.json
 
-# Local scripture vault (NEVER upload to GitHub)
-Vault_DajueZang/
+# Local scripture vault (exclude scripture contents, keep folder and mounting guide)
+Vault_DajueZang/*
+!Vault_DajueZang/READ_ME_大覺藏原典掛載指南.md
 .graphify_cache.pkl
 .smtcmp_vector_db.tar.gz
 00_黃金索引庫/
