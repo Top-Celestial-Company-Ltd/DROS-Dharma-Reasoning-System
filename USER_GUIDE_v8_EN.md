@@ -1,7 +1,7 @@
 # ☸️ DROS 8.0.0 Ultimate Companion Guide (USER_GUIDE_v8_EN.md)
 
 > 💡 **"By downloading the Mahabodhi Pitaka, everyone can possess the most rigorous doctrinal study companion!"**  
-> Welcome to DROS 8.0.0 (Epistemic Edition) - Dharma Reasoning & Epistemology Operating System. This system transforms **10,156** hardcore conceptual nodes into a loyal, dual-track doctrinal companion running locally on your device.
+> Welcome to DROS 8.0.0 (Epistemic Edition) - Dharma Reasoning & Epistemology Operating System. This system transforms **36,000+ (36,057)** hardcore conceptual nodes into a loyal, dual-track doctrinal companion running locally on your device.
 > 
 > This guide is designed for two types of practitioners. If you are an "End-User Practitioner" with no coding experience, please read the first section directly. If you are a "Tech Geek" looking to develop on top of DROS, please see the second section.
 
@@ -11,7 +11,7 @@
 
 | Folder/File | Role | Strictness Level | Description |
 | :--- | :--- | :--- | :--- |
-| 🧠 **`core/`** | **Knowledge Brain** | 🚨 **DO NOT MODIFY** | Contains 10,156 golden nodes. This is the brain of the AI with clean Properties formatted concepts! |
+| 🧠 **`core/`** | **Knowledge Brain** | 🚨 **DO NOT MODIFY** | Contains 36,000+ golden concept nodes. This is the brain of the AI with clean Properties formatted concepts! |
 | ⚙️ **`src/`** | **Reasoning Engine** | 🔒 **Keep Locked** | Contains the SDK, Proxy endpoints, and Core Contracts (`contract.py`, etc). |
 | 📜 **`docs/`** | **Constitution** | 🛡️ **Free to Read** | All system whitepapers and architecture documentation. |
 | 📁 **`Vault_DajueZang/`** | **Data Port (Mahabodhi Pitaka)** | 🟢 **Free Access** | Place your physical Mahabodhi Pitaka scripture nodes here. |
@@ -24,7 +24,9 @@
 > **📦 Lightweight Core vs. Full Vault**
 > The default `core/` directory already includes the "General Cycle" and various topics, comprising roughly **28 core Mahayana and Sravakayana original texts (1,193 volumes in total)**, paired with **36,000+ terminological nodes** acting as the foundation of Buddhist doctrine. This is extremely lightweight and sufficient for daily study, making it **perfect for cloud syncing and carrying on Obsidian Mobile**.
 > 
-> Conversely, the complete "Mahabodhi Pitaka" is over **1.6GB**. If you are an advanced researcher or wish to query the entirety of the Pitaka, please download the full version and place it in the `Vault_DajueZang/` folder to **"Mount it freely"**!
+> Conversely, the complete "Mahabodhi Pitaka" is over **1.6GB**. If you are an advanced researcher or wish to query the entirety of the Pitaka, please download the full version and place it in the `Vault_DajueZang/` folder to **"Mount it freely"**!  
+> 🏺 **Mahabodhi Pitaka (1.6GB Full Archive) Official High-Speed Download Site**:  
+> 👉 [https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z](https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z)
 
 ---
 
@@ -36,7 +38,7 @@
 1. **Install Obsidian**: Please visit the [Obsidian Official Website](https://obsidian.md/) to download and install.
 2. **Prepare API Key**: Go to [Google AI Studio](https://aistudio.google.com/) to obtain a free Gemini API Key (OpenRouter and DeepSeek custom endpoints are also supported).
 3. **Load DROS Vault**: Open Obsidian, select **"Open folder as vault"**, and point it to this extracted project folder.
-   - *(Optional Canonical Mounting)*: If you have downloaded the full 1.6GB Mahabodhi Pitaka, simply place it into `Vault_DajueZang/`. The TS plugin natively penetrates and extracts exact passage coordinates in milliseconds.
+   - *(Optional Canonical Mounting)*: If you need to perform deep canonical textual criticism, you can download the complete 1.6GB Mahabodhi Pitaka from the [Official Download Site](https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z) and place it into `Vault_DajueZang/`. The TS plugin natively penetrates and extracts exact passage coordinates in milliseconds.
 4. **Enable Exclusive Chat Plugin (🔑 CRITICAL STEP)**:
    - In the Obsidian interface, click "Settings (⚙️ Gear icon)" -> select "Community plugins" on the left menu.
    - If using Community Plugins for the first time, click **"Turn off Restricted Mode"**.
