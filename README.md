@@ -121,6 +121,14 @@
 
 ---
 
+## 🌐 官方入口與社群交流 (Community & Official Portals)
+
+* 🌐 **官方網站 (Official Portal)**：[https://dharma.dr-is.io](https://dharma.dr-is.io)
+* 📘 **Facebook 專頁**：[Buddha Unlocked (解密佛陀)](https://www.facebook.com/buddhaunlocked)
+* 💬 歡迎學者、工程師與修行行者加入社群交流與提問，共同推動數位佛學與零幻覺 AI 推理演進！
+
+---
+
 ## ⚖️ 授權與合規 (Licensing & Compliance)
 
 * **系統架構與微內核 (Engine & Micro-kernels)**: 採用 **AGPL-3.0 授權**。任何基於本系統進行的修改與網路服務提供（包括 API、SaaS），皆必須開放原始碼。

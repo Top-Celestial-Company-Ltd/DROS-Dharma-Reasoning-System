@@ -149,3 +149,11 @@ DROS 系統的核心特色為「金剛」與「菩薩」雙軌制推理契約，
 > 1. **關於「金剛合約 (Vajra Contract)」的束縛**。
 > 2. **關於「無感免疫機制」與「純物理儲存架構」**。
 > 3. **架構辯證與終極評價**：這套系統為何刻意拋棄 Vector DB？它是否真的建立了一道目前主流 RAG 架構無法跨越的技術護城河？
+
+---
+
+## 🌐 官方入口與社群交流 (Community & Official Portals)
+
+* 🌐 **官方網站 (Official Portal)**：[https://dharma.dr-is.io](https://dharma.dr-is.io)
+* 📘 **Facebook 專頁**：[Buddha Unlocked (解密佛陀)](https://www.facebook.com/buddhaunlocked)
+* 💬 歡迎隨時前往社群交流討論、反饋問題或分享法義伴讀心得！

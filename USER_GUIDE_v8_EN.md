@@ -142,3 +142,11 @@ Copy and paste the following **"Soul-Searching Meta-Prompt"** to see how your AI
 > 1. **Regarding the constraint of the "Vajra Contract"**.
 > 2. **Regarding "Seamless Immunity" and "Pure Physical Storage Architecture"**.
 > 3. **Architectural Dialectics and Ultimate Verdict**: Why does this system deliberately abandon Vector DBs? Has it truly built a technical moat that mainstream RAG architectures cannot cross?
+
+---
+
+## 🌐 Community & Official Portals
+
+* 🌐 **Official Portal**: [https://dharma.dr-is.io](https://dharma.dr-is.io)
+* 📘 **Facebook Community**: [Buddha Unlocked](https://www.facebook.com/buddhaunlocked)
+* 💬 Scholars, developers, and practitioners are welcome to connect, ask questions, and share insights!
