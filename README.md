@@ -14,7 +14,7 @@
 ### 📥 立即下載 DROS v8.0 開箱即用筆記庫 (Ready-to-Use Vault)
 > **🚀 Zero-Ops 免環境配置・手機 / 平板 / 電腦全平台通用**  
 > 內建 28 部大乘核心原典 ＋ 36,000+ 佛學名相節點 ＋ **雙外掛預先配置**（DROS Doctrinal Copilot v1.0.9 伴讀外掛 ＋ Force Read Mode 義理原典防誤觸唯讀外掛，預設自動啟用）：  
-> 📦 **[👉 點此一鍵下載 DROS-Core-Vault-v8.0.zip (約 394MB)](https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System/releases/download/v8.0.0/DROS-Core-Vault-v8.0.zip)**  
+> 📦 **[👉 點此一鍵下載 DROS-Core-Vault-v8.0.zip (約 105MB)](https://github.com/Top-Celestial-Company-Ltd/Dharma-Reasoning-Operating-System/releases/download/v8.0.0/DROS-Core-Vault-v8.0.zip)**  
 > *(手機 iOS / Android 或電腦 Windows / macOS / Linux 下載解壓縮後，打開 Obsidian 點選「開啟資料夾作為保管庫」，原典名相自動唯讀保護，伴讀書僮立刻啟動！)*
 >
 > 📦 **輕量核心與完整大覺藏 (Core vs. Full Vault)**  
