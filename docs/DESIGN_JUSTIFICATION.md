@@ -7,7 +7,7 @@
 
 在現代 AI 開發領域，多數工程師迫於現實而拼湊龐大的技術棧（Django/Spring Boot + PostgreSQL + Chroma 向量資料庫 + Redis 快取 + Docker 容器），建構出重達數 GB、動輒因連接爆開或資料損壞而崩潰的臃腫 RAG 系統。
 
-DROS (Dharma Reasoning OS) 7.3 採取了完全相反的降維打擊策略 ── **「無資料庫（Serverless Flat-File）與語義 OS 物理映射」**。本白皮書旨在從現代計算機科學、物理 I/O、併發安全與軟體維運生命週期等多維度，論證本架構的相對優越性與隱藏的設計巧思。
+DROS (Dharma Reasoning OS) v8.0.0 採取了完全相反的降維打擊策略 ── **「無資料庫（Serverless Flat-File）與語義 OS 物理映射」**。本白皮書旨在從現代計算機科學、物理 I/O、併發安全與軟體維運生命週期等多維度，論證本架構的相對優越性與隱藏的設計巧思。
 
 ---
 
@@ -134,7 +134,7 @@ DROS 內部深藏了五大為了追求極致效能與佛法對齊而設計的技
 
 ## 📊 七、 系統架構大對決：DROS vs 傳統 RAG 架構
 
-| 比較項目 | DROS 7.3 (Filesystem-as-DB) | 傳統資料庫方案 (MySQL / PostgreSQL) | 向量資料庫方案 (Chroma / Milvus) |
+| 比較項目 | DROS v8.0.0 (Filesystem-as-DB) | 傳統資料庫方案 (MySQL / PostgreSQL) | 向量資料庫方案 (Chroma / Milvus) |
 | :--- | :--- | :--- | :--- |
 | **持久化媒介** | 📂 **原生樹狀 Markdown 檔案系統** | 🗄️ 二進位專有數據頁 (Data Pages) | 🗃️ 二進位高維向量索引結構 |
 | **讀取性能** | ⚡ **極高 (0.1ms RAM 內存尋址)** | 🟡 中等 (受硬碟隨機 I/O 吞吐限制) | 🔴 緩慢 (高維度矩陣相似度運算，極耗算力) |

@@ -8,7 +8,7 @@ DROS (Deterministic Runtime Operating System) 不是傳統的問答機器人，�
 
 在 DROS 的世界觀中，大語言模型 (LLM) 被剝奪了自主檢索與發散推理的自由，被降級為系統的「算術邏輯單元 (ALU)」。系統通過外部的編譯器與虛擬機，將複雜的法義與宗派戒律轉化為確定性的執行圖，達成高精度、低算力、零幻覺的工業級表現。
 
-在 7.2 版本 (Epistemic Edition) 中，DROS 進一步引入了「三層認識論治理架構」，徹底攻克了「過度正統化鎖死 (Orthodoxy Lock)」的挑戰，使 AI 在追求嚴謹考證的同時，依然能保留跨學門詮釋映射與高階般若推演的活性。
+在 8.0.0 版本 (Epistemic Edition) 中，DROS 進一步引入了「三層認識論治理架構」，徹底攻克了「過度正統化鎖死 (Orthodoxy Lock)」的挑戰，使 AI 在追求嚴謹考證的同時，依然能保留跨學門詮釋映射與高階般若推演的活性。
 
 ---
 
@@ -59,7 +59,7 @@ graph TD
 
 #### 🛡️ 運行時安全與模式自癒 (Vajra & Bodhisattva Fallback)
 1. **編譯期檢查**：若 YAML 契約不符合 `ContractAST` 的強型別約束，編編譯器直接拋出 `CompileError`，阻斷無效的 Token 消耗。
-2. **運行時校驗 (Guard VM)**：當 LLM 輸出的 Token 串流中，被 `Live Validator` 偵測到缺乏 T-Number 座標支援、或發生 `CROSS_SECT_VIOLATION` 時，系統會立即熔斷。在 7.1 版本中，GuardVM 結合 `AuthorityNodesOnly` 參數動態啟動（在 `Speculative` 模式下放行，在 `Vajra` 與 `Interpretive` 模式下強制審計）。
+2. **運行時校驗 (Guard VM)**：當 LLM 輸出的 Token 串流中，被 `Live Validator` 偵測到缺乏 T-Number 座標支援、或發生 `CROSS_SECT_VIOLATION` 時，系統會立即熔斷。在 8.0.0 版本中，GuardVM 結合 `AuthorityNodesOnly` 參數動態啟動（在 `Speculative` 模式下放行，在 `Vajra` 與 `Interpretive` 模式下強制審計）。
 3. **自癒降級（菩薩模式）**：當系統物理級判定本地資料庫匹配度低於安全閾值時，編譯器會實施進程上下文切換 (Context Switching)，主動將 `{{RUNTIME_MODE}}` 切換為 `Bodhisattva`，抽換提示詞圖層，允許 AI 進行語意導航與柔性兜底，徹底根治「過度對齊失語症」。
 
 ---
@@ -79,11 +79,11 @@ graph TD
 
 ## 6. v5.5 認識論感知提示詞編譯器與三層治理架構
 
-DROS 7.2 Epistemic Edition 引進了全新的 **v5.5 契約感知提示詞編譯器 (Contract-Aware Prompt Compiler)**，在執行階段將推理契約 (Inference Contract)、語意圖譜 (Graphify Nodes)、以及執行上下文進行動態編譯，並物理劃分三層認識論邊界。
+DROS 8.0.0 Epistemic Edition 引進了全新的 **v5.5 契約感知提示詞編譯器 (Contract-Aware Prompt Compiler)**，在執行階段將推理契約 (Inference Contract)、語意圖譜 (Graphify Nodes)、以及執行上下文進行動態編譯，並物理劃分三層認識論邊界。
 
 ### 6.1 提示詞加載安全隔離與可視化智慧編譯引擎 (Dynamic Prompt Loading & Visualized Assembly Engine)
 
-為了在極致的個人化體驗與核心技術底座的穩定性之間取得完美平衡，系統在 7.5 版本中進一步將「自訂 Prompt 隔離」升級為**「可視化智慧編譯與拼接引擎 (Visualized Assembly Engine)」**。
+為了在極致的個人化體驗與核心技術底座的穩定性之間取得完美平衡，系統在 8.0.0 版本中進一步將「自訂 Prompt 隔離」升級為**「可視化智慧編譯與拼接引擎 (Visualized Assembly Engine)」**。
 
 *   **物理安全唯讀艙 (Force-Read System Defaults)**：
     官方預設的 [System_Prompt_v5.5.md](../tools/obsidian-dros-copilot/System_Prompt_v5.5.md) 被部署在外掛隱藏目錄 `.obsidian/plugins/dros-doctrinal-copilot/System_Prompt_v5.3.md` 下。因為以 `.` 開頭的系統目錄在 Obsidian 介面中被強制物理隱藏，使用者完全無法在編輯器中讀取或意外修改它，徹底杜絕了人為編輯對系統預設提示詞的污染！當外掛設定的 `customPromptPath` 留空時，外掛會自動啟動「Force-Read」安全沙盒強制讀取此隱藏檔案。
