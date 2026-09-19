@@ -30,21 +30,21 @@ DROS 的運行完全擺脫了提示詞玄學（Prompt Alchemy），每一次 Req
 
 ```mermaid
 graph TD
-    A[Input Query] --> B[Context Router / Proxy]
+    A[Input Query] --> B[Obsidian Native Router]
     B --> C{解析契約請求<br/>strict_vajra / balanced_vajra / speculative_prajna}
     C --> D[Load Target YAML Contract]
     D --> E[Inference Contract Compiler]
-    E --> F[Compile System_Prompt_v5.3.md]
+    E --> F[Compile System_Prompt_v5.5.md]
     F --> G[Graph RAG / PageIndex Fetch]
     G --> H[Injection: Runtime Variables & Envelope]
     H --> I[Reasoning Engine: Compute Unit / Pro & Lite]
-    I --> J{Guard VM Output Check<br/>AuthorityNodesOnly?}
+    I --> J{Guard Policy Output Check<br/>AuthorityNodesOnly?}
     J -- True --> K[Verify T-Number Coordinates]
     J -- False --> L[Bypass Coordinate Checks]
-    K --> M[Output Response / SSE Stream]
+    K --> M[Output Response / Stream]
     L --> M
     
-    subgraph "DROS Backend Core (戒 & 定)"
+    subgraph "DROS Doctrinal Core (戒 & 定)"
     E
     F
     G

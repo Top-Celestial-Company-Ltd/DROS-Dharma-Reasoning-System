@@ -22,7 +22,7 @@ DROS 7.2+ 是一個旨在對大語言模型（LLM）進行精確文獻檢索與�
 
 ### 1. 個人證量與階位印證 | Personal Realization & Attainment
 * **技術原理 (Technical Principle)**：系統處理客觀之靜態文本圖譜，無法且嚴禁感知使用者之主觀精神狀態。
-* **限制行為 (Enforced Behavior)**：DROS 嚴禁判定使用者是否「開悟」或達到特定的修證階位。任何對使用者證量的推演皆會觸發 **GuardVM 模式熔斷**，系統必須將回應退回至文獻學學術定義範疇。
+* **限制行為 (Enforced Behavior)**：DROS 嚴禁判定使用者是否「開悟」或達到特定的修證階位。任何對使用者證量的推演皆會觸發 **認識論安全防護熔斷**，系統必須將回應退回至文獻學學術定義範疇。
 
 ### 2. 因果業力與命運斷定 | Personal Karma & Prognostication
 * **技術原理 (Technical Principle)**：個人具體遭遇之因果關係超出了確定性語意算法的處理範圍。

@@ -1,110 +1,132 @@
-# 📜 DROS v8.0.0 Epistemic Edition - 系統清單 (System Manifest)
-> 產出時間: 2026-07-21 (基線鎖定) / 2026-09-18 (v8.0.0 Zero-Ops Release 凍結)
-> 系統狀態: **LOCKED / EPISTEMIC EDITION (36,057 NODES BASELINE)**
+# 📜 DROS v8.0.0 數位佛堂經藏總清單 (Dharma Knowledge Manifest)
+> 產出時間: 2026-09-18 (v8.0.0 Epistemic Edition 基線鎖定) / 2026-09-19 (經藏非工程結構重構)
+> 系統狀態: **LOCKED / DHARMA EDITION (宗派本體與原典大藏經雙軌拓撲)**
+> 適用對象: 佛學研究者、義理修行者、Obsidian 數位佛堂研讀者
 
 ---
 
-## 🏛️ 核心架構 (Core Architecture)
+## 🏛️ 義理架構總覽 (Doctrinal Architecture)
 
-### 🏯 義理各館 (Pavilions)
-*   **AI 善導**: 674 個資源檔案
-*   **AI 彌勒**: 2088 個資源檔案
-*   **AI 惠能**: 405 個資源檔案
-*   **AI 智者**: 10122 個資源檔案
-*   **AI 總論**: 3415 個資源檔案
-*   **AI 龍樹**: 168 個資源檔案
-*   **Long_Classics**: 15 個資源檔案
-*   **Pavilion_Digital**: 0 個資源檔案
-*   **Pavilion_Sandbox**: 0 個資源檔案
-*   **System_Docs**: 1 個資源檔案
-*   **辯經記錄**: 0 個資源檔案
-
-### 📜 長篇原典庫 (Long Classics)
-*   T0223_《摩訶般若波羅蜜經》_016-p.md (0.4 KB)
-*   T0223_《摩訶般若波羅蜜經》_028-p.md (0.4 KB)
-*   T0223_《摩訶般若波羅蜜經》_036-p.md (0.4 KB)
-*   T0223_摩訶般若波羅蜜經_005-p_---.md (0.9 KB)
-*   T0223_摩訶般若波羅蜜經_011-p_---.md (1.0 KB)
-*   T0223_摩訶般若波羅蜜經_012-p_---.md (0.8 KB)
-*   T0223_摩訶般若波羅蜜經_016-p_---.md (0.8 KB)
-*   T0278_《大方廣佛華嚴經》.md (2043.8 KB)
-*   T0279_《大方廣佛華嚴經》.md (2105.3 KB)
-*   T0279_華嚴經_PageIndex_v8.md (4000.9 KB)
-*   T0293_《大方廣佛華嚴經》.md (1041.0 KB)
-*   T0670_楞伽阿跋多羅寶經_wiki_---.md (0.7 KB)
-*   T0670_楞伽阿跋多羅寶經_wiki_關聯.md (0.9 KB)
-*   T0676_016.玄奘三藏譯撰全輯解深密經_-_唐_玄奘譯-台灣_王穆提_疏文斷句_版權說明.md (0.0 KB)
-*   T0676_016.玄奘三藏譯撰全輯解深密經_-_唐_玄奘譯-台灣_王穆提_疏文斷句_贊助.md (1.3 KB)
-
-## 🛠️ 系統組件 (System Components)
-### 📄 Docs
-*   ARCHITECTURE_v8.md
-*   DESIGN_JUSTIFICATION.md
-*   DROS-System-Report-v8.0.0.md
-*   DROS_BOUNDARY.md
-*   DROS_MANIFEST_v8.md
-*   DROS_MICROKERNEL_SPEC.md
-*   DROS_Sectarian_Validation_Report.md
-*   LIMITATIONS_AND_DEFENSE.md
-*   OBSIDIAN_PLUGIN_BLUEPRINT.md
-*   PERFORMANCE_AND_HARDWARE.md
-*   System_Prompt_v5.5.md
-*   USER_GUIDE_v8.md
-*   USER_GUIDE_v8_EN.md
-*   devlog
-
-### 📄 Tools
-*   __pycache__
-*   contracts
-*   dros_contract_ast.py
-*   dros_dna_enricher.py
-*   dros_guard_vm.py
-*   dros_sdk_v8.py
-*   gemini_proxy.py
-*   obsidian-dros-copilot
-*   雙擊執行-DROS金剛注射器.bat
+DROS 知識庫採取「**宗派義理本體（Core Pavilions）**」與「**物理大藏經庫（Vault DajueZang）**」解耦的雙軌架構：
+- **黃金索引層 (00_黃金索引庫)**：提供百萬字級大覺藏原典與權威法相辭典的常數級快速錨定入口。
+- **宗派本體館 (Core Pavilions)**：承載漢傳六大義理學系之經論原典 (raw)、精煉名相概念 (concepts) 與跨宗派比對橋接點 (bridges)。
+- **物理大藏經庫 (Vault DajueZang)**：承載大正藏、菩薩藏、瑜伽師地論原典與巨部科判全文，作為金剛驗證之最高權威證據錨點。
+- **行者自修館 (User_Pavilion)**：提供修行者日常定錨筆記、法義辯析與隨修心得之專屬空間。
 
 ---
-## 🔍 詳細檔案清單 (Full Audit Log)
 
-*   .env
-*   .gitignore
+## 🏯 一、六大宗派義理各館 (Doctrinal Pavilions)
+
+### 🪷 **AI 善導**
+- **義理範疇**：淨土宗核心原典與名相體系（善導大師專修念佛、淨土三經、往生論）
+- **文獻資產**：總計 **674** 個檔案 (9.01 MB)
+- **結構配置**：經論原典 (raw) `14` 部 ｜ 名相概念節點 (concepts) `636` 條 ｜ 跨宗橋接 (bridges) `9` 條
+
+### 🪷 **AI 彌勒**
+- **義理範疇**：瑜伽行唯識學派（彌勒、無著、世親、玄奘三藏譯撰、成唯識論）
+- **文獻資產**：總計 **2090** 個檔案 (82.22 MB)
+- **結構配置**：經論原典 (raw) `101` 部 ｜ 名相概念節點 (concepts) `1879` 條 ｜ 跨宗橋接 (bridges) `12` 條
+
+### 🪷 **AI 惠能**
+- **義理範疇**：禪宗祖師法脈（六祖壇經、傳燈錄、荷澤、臨濟、曹洞心性公案）
+- **文獻資產**：總計 **413** 個檔案 (13.20 MB)
+- **結構配置**：經論原典 (raw) `41` 部 ｜ 名相概念節點 (concepts) `335` 條 ｜ 跨宗橋接 (bridges) `9` 條
+
+### 🪷 **AI 智者**
+- **義理範疇**：天台宗法華圓頓止觀（智者大師法華玄義、文句、摩訶止觀四教儀）
+- **文獻資產**：總計 **10122** 個檔案 (67.89 MB)
+- **結構配置**：經論原典 (raw) `82` 部 ｜ 名相概念節點 (concepts) `9908` 條 ｜ 跨宗橋接 (bridges) `11` 條
+
+### 🪷 **AI 總論**
+- **義理範疇**：佛教全景根本教義、阿含基礎、四聖諦、十二因緣、大乘共相
+- **文獻資產**：總計 **3420** 個檔案 (65.95 MB)
+- **結構配置**：經論原典 (raw) `66` 部 ｜ 名相概念節點 (concepts) `3270` 條 ｜ 跨宗橋接 (bridges) `0` 條
+
+### 🪷 **AI 龍樹**
+- **義理範疇**：中觀根本大義（龍樹中論、十二門論、大智度論、中道實相）
+- **文獻資產**：總計 **174** 個檔案 (16.06 MB)
+- **結構配置**：經論原典 (raw) `69` 部 ｜ 名相概念節點 (concepts) `64` 條 ｜ 跨宗橋接 (bridges) `8` 條
+
+---
+
+## 📜 二、長篇原典庫 (Long Classics)
+長篇原典庫保留結構完整之百萬字巨著，維持物理文本樹拓撲，供 DROS 執行跨卷期高維切片檢索：
+
+*   **T0223_《摩訶般若波羅蜜經》_016-p.md** (0.4 KB)
+*   **T0223_《摩訶般若波羅蜜經》_028-p.md** (0.4 KB)
+*   **T0223_《摩訶般若波羅蜜經》_036-p.md** (0.4 KB)
+*   **T0223_摩訶般若波羅蜜經_005-p_---.md** (0.9 KB)
+*   **T0223_摩訶般若波羅蜜經_011-p_---.md** (1.0 KB)
+*   **T0223_摩訶般若波羅蜜經_012-p_---.md** (0.8 KB)
+*   **T0223_摩訶般若波羅蜜經_016-p_---.md** (0.8 KB)
+*   **T0278_《大方廣佛華嚴經》.md** (2043.8 KB)
+*   **T0279_《大方廣佛華嚴經》.md** (2105.3 KB)
+*   **T0279_華嚴經_PageIndex_v7.md** (3996.1 KB)
+*   **T0293_《大方廣佛華嚴經》.md** (1041.0 KB)
+*   **T0670_楞伽阿跋多羅寶經_wiki_---.md** (0.7 KB)
+*   **T0670_楞伽阿跋多羅寶經_wiki_關聯.md** (0.9 KB)
+*   **T0676_016.玄奘三藏譯撰全輯解深密經_-_唐_玄奘譯-台灣_王穆提_疏文斷句_版權說明.md** (0.0 KB)
+*   **T0676_016.玄奘三藏譯撰全輯解深密經_-_唐_玄奘譯-台灣_王穆提_疏文斷句_贊助.md** (1.3 KB)
+
+---
+
+## 🏺 三、大覺藏物理文獻庫 (Vault DajueZang)
+承載漢傳與梵藏漢對勘之核心古籍、長篇論疏與歷代科判表：
+
+*   **📂 06-菩薩藏/**：7 個原典文獻與科判檔案 (40.15 MB)
+*   **📂 07-瑜伽師地論/**：3 個原典文獻與科判檔案 (236.83 MB)
+*   **📄 11-近代** (1.57 MB)
+*   **📄 READ_ME_大覺藏原典掛載指南.md** (0.00 MB)
+*   **📄 z-附件** (35.58 MB)
+*   **📄 大覺藏存放說明.md** (0.00 MB)
+
+> 💡 *完整版大覺藏文獻（含大正藏、卍續藏、南傳藏等約 1.6GB 經藏）請參閱 `Vault_DajueZang/大覺藏存放說明.md`。*
+
+---
+
+## 🏷️ 四、黃金索引庫 (00_黃金索引庫)
+極速檢索導航層，提供直達原典段落座標的實體跳轉：
+
+*   **0-大覺藏集索引.md** (12.97 MB)
+*   **0-法相辭典索引.md** (0.90 MB)
+
+---
+
+## 📖 五、數位佛堂研讀指南 (User Guides)
+*   **README.md**：DROS 數位佛堂系統總體說明與願景。
+*   **USER_GUIDE_v8.md**：Obsidian 雙軌伴學外掛安裝、金剛/菩薩合約切換與使用手冊。
+*   **USER_GUIDE_v8_EN.md**：English User Guide for Global Buddhist Scholars & Practitioners.
+*   **CONTRIBUTING.md**：名相開採守則與大藏經文獻校勘貢獻指南。
+*   **SAFETY.md**：佛學治學認識論憲章與防範 AI 幻覺規範。
+
+---
+
+## 🔍 六、完整經藏檔案查驗日誌 (Dharma Knowledge Audit Log - 共 16933 篇)
+
+*   00_黃金索引庫\0-大覺藏集索引.md
+*   00_黃金索引庫\0-法相辭典索引.md
 *   CONTRIBUTING.md
-*   DROS_RFC_001_Whitepaper.md
 *   LICENSE
-*   LICENSE.md
-*   MANIFEST.in
 *   README.md
 *   SAFETY.md
 *   UPGRADE.md
-*   config.yaml
-*   dros_golden_manifest.json
-*   dros_logo.svg
-*   dros_test_pipeline.py
-*   gemini_proxy.py
-*   install.bat
-*   install.sh
-*   main.py
-*   pyproject.toml
-*   requirements.txt
-*   run.bat
-*   run.sh
-*   佛測-掛載大覺藏_V5.5_Graphify二級.md
-*   佛測-未掛載大覺藏_V5.5_Graphify二級.md
-*   雙擊執行-DROS金剛注射器.bat
-*   .obsidian\plugins\dros-doctrinal-copilot\README.md
-*   .obsidian\plugins\dros-doctrinal-copilot\System_Prompt_v5.5.md
-*   .obsidian\plugins\dros-doctrinal-copilot\data.json
-*   .obsidian\plugins\dros-doctrinal-copilot\dros_golden_manifest.json
-*   .obsidian\plugins\dros-doctrinal-copilot\main.js
-*   .obsidian\plugins\dros-doctrinal-copilot\manifest.json
-*   .obsidian\plugins\dros-doctrinal-copilot\styles.css
-*   contracts\balanced_vajra.yaml
-*   contracts\bodhisattva_default.yaml
-*   contracts\default_vajra.yaml
-*   contracts\speculative_prajna.yaml
-*   contracts\strict_vajra.yaml
-*   core\佛堂大門.md
+*   USER_GUIDE_v8.md
+*   USER_GUIDE_v8_EN.md
+*   User_Pavilion\Insights\Test_Note.md
+*   Vault_DajueZang\06-菩薩藏\00-《成唯識論述記集成編對讀》全文標點本\成唯識論述記集成編對讀（02）.pdf
+*   Vault_DajueZang\06-菩薩藏\280《唯識開蒙問答》疏文斷句.pdf
+*   Vault_DajueZang\06-菩薩藏\294 般若燈論釋  略註.pdf
+*   Vault_DajueZang\06-菩薩藏\300《玄奘三藏譯撰全輯》七十六部\002-3.《玄奘三藏譯撰全輯》 《大般若波羅蜜多經》３ - 唐 玄奘譯-台灣 王穆提 疏文斷句.pdf
+*   Vault_DajueZang\06-菩薩藏\307.《大乘佛教修證止觀經論合輯》.pdf
+*   Vault_DajueZang\06-菩薩藏\309.《漢語佛教修證止觀阿毗達摩論合輯》.pdf
+*   Vault_DajueZang\06-菩薩藏\310 《成唯識論述記論議》\310《成唯識論述記論議》.pdf
+*   Vault_DajueZang\07-瑜伽師地論\0科判\瑜伽師地論總科判表.pdf
+*   Vault_DajueZang\07-瑜伽師地論\0科判\開仁法師《瑜伽师地论分卷结构表》上册.pdf
+*   Vault_DajueZang\07-瑜伽師地論\0科判\開仁法師《瑜伽师地论分卷结构表》下册.pdf
+*   Vault_DajueZang\11-近代\羅時憲—唯識方隅.pdf
+*   Vault_DajueZang\READ_ME_大覺藏原典掛載指南.md
+*   Vault_DajueZang\z-附件\攝大乘論科判.pdf
+*   Vault_DajueZang\大覺藏存放說明.md
 *   core\AI 善導\raw\T0310_《大寶積經》.md
 *   core\AI 善導\raw\T0310_《大寶積經》無量壽如來會.md
 *   core\AI 善導\raw\T0360_《無量壽經》.md
@@ -1429,6 +1451,7 @@
 *   core\AI 彌勒\wiki\concepts\四攝事.md
 *   core\AI 彌勒\wiki\concepts\四教.md
 *   core\AI 彌勒\wiki\concepts\四智.md
+*   core\AI 彌勒\wiki\concepts\四智心品.md
 *   core\AI 彌勒\wiki\concepts\四根本煩惱.md
 *   core\AI 彌勒\wiki\concepts\四法界.md
 *   core\AI 彌勒\wiki\concepts\四流漂汩.md
@@ -2081,6 +2104,7 @@
 *   core\AI 彌勒\wiki\concepts\無著菩薩.md
 *   core\AI 彌勒\wiki\concepts\無覆無記.md
 *   core\AI 彌勒\wiki\concepts\無記.md
+*   core\AI 彌勒\wiki\concepts\無記_三性義.md
 *   core\AI 彌勒\wiki\concepts\無諍.md
 *   core\AI 彌勒\wiki\concepts\無諍心.md
 *   core\AI 彌勒\wiki\concepts\無諍法.md
@@ -2923,6 +2947,7 @@
 *   core\AI 惠能\wiki\concepts\一切法無我.md
 *   core\AI 惠能\wiki\concepts\一味禪.md
 *   core\AI 惠能\wiki\concepts\一實法.md
+*   core\AI 惠能\wiki\concepts\一心.md
 *   core\AI 惠能\wiki\concepts\一念心歇.md
 *   core\AI 惠能\wiki\concepts\一期.md
 *   core\AI 惠能\wiki\concepts\一毛頭師子.md
@@ -2951,9 +2976,11 @@
 *   core\AI 惠能\wiki\concepts\了別識.md
 *   core\AI 惠能\wiki\concepts\事別.md
 *   core\AI 惠能\wiki\concepts\事成就.md
+*   core\AI 惠能\wiki\concepts\二無我.md
 *   core\AI 惠能\wiki\concepts\二種無我.md
 *   core\AI 惠能\wiki\concepts\五位君臣.md
 *   core\AI 惠能\wiki\concepts\五家.md
+*   core\AI 惠能\wiki\concepts\五法.md
 *   core\AI 惠能\wiki\concepts\五法三性.md
 *   core\AI 惠能\wiki\concepts\五無間.md
 *   core\AI 惠能\wiki\concepts\五輪.md
@@ -3070,6 +3097,7 @@
 *   core\AI 惠能\wiki\concepts\楊岐會.md
 *   core\AI 惠能\wiki\concepts\楊歧.md
 *   core\AI 惠能\wiki\concepts\楊歧方會禪師.md
+*   core\AI 惠能\wiki\concepts\楞伽經.md
 *   core\AI 惠能\wiki\concepts\楞嚴經.md
 *   core\AI 惠能\wiki\concepts\機鋒.md
 *   core\AI 惠能\wiki\concepts\正中偏.md
@@ -3099,6 +3127,7 @@
 *   core\AI 惠能\wiki\concepts\清淨覺相.md
 *   core\AI 惠能\wiki\concepts\溈仰宗.md
 *   core\AI 惠能\wiki\concepts\溈山靈祐.md
+*   core\AI 惠能\wiki\concepts\滅受想定.md
 *   core\AI 惠能\wiki\concepts\漸修.md
 *   core\AI 惠能\wiki\concepts\潛在種性.md
 *   core\AI 惠能\wiki\concepts\無上明呪.md
@@ -3145,6 +3174,7 @@
 *   core\AI 惠能\wiki\concepts\目犍連.md
 *   core\AI 惠能\wiki\concepts\直下承當.md
 *   core\AI 惠能\wiki\concepts\直指人心.md
+*   core\AI 惠能\wiki\concepts\真如.md
 *   core\AI 惠能\wiki\concepts\知見.md
 *   core\AI 惠能\wiki\concepts\知解.md
 *   core\AI 惠能\wiki\concepts\石霜.md
@@ -3160,6 +3190,7 @@
 *   core\AI 惠能\wiki\concepts\穆州陳尊宿.md
 *   core\AI 惠能\wiki\concepts\空中華.md
 *   core\AI 惠能\wiki\concepts\空劫.md
+*   core\AI 惠能\wiki\concepts\空性.md
 *   core\AI 惠能\wiki\concepts\第一機.md
 *   core\AI 惠能\wiki\concepts\筏喻.md
 *   core\AI 惠能\wiki\concepts\絕後再甦.md
@@ -3209,6 +3240,7 @@
 *   core\AI 惠能\wiki\concepts\長慶.md
 *   core\AI 惠能\wiki\concepts\長沙岑.md
 *   core\AI 惠能\wiki\concepts\長爪梵志.md
+*   core\AI 惠能\wiki\concepts\阿賴耶識.md
 *   core\AI 惠能\wiki\concepts\阿難尊者.md
 *   core\AI 惠能\wiki\concepts\隨墮.md
 *   core\AI 惠能\wiki\concepts\隨心自在.md
@@ -14148,6 +14180,7 @@
 *   core\AI 總論\wiki\concepts\十六大國.md
 *   core\AI 總論\wiki\concepts\十六相.md
 *   core\AI 總論\wiki\concepts\十善.md
+*   core\AI 總論\wiki\concepts\十四無記.md
 *   core\AI 總論\wiki\concepts\十四私施.md
 *   core\AI 總論\wiki\concepts\十四種無畏.md
 *   core\AI 總論\wiki\concepts\十惑.md
@@ -15927,6 +15960,7 @@
 *   core\AI 總論\wiki\concepts\生老病死因.md
 *   core\AI 總論\wiki\concepts\生般涅槃.md
 *   core\AI 總論\wiki\concepts\生酥.md
+*   core\AI 總論\wiki\concepts\用大.md
 *   core\AI 總論\wiki\concepts\留難.md
 *   core\AI 總論\wiki\concepts\畜生道.md
 *   core\AI 總論\wiki\concepts\畢定眾.md
@@ -15964,6 +15998,7 @@
 *   core\AI 總論\wiki\concepts\直心道塲.md
 *   core\AI 總論\wiki\concepts\相似五通.md
 *   core\AI 總論\wiki\concepts\相似即.md
+*   core\AI 總論\wiki\concepts\相大.md
 *   core\AI 總論\wiki\concepts\相憎.md
 *   core\AI 總論\wiki\concepts\相現.md
 *   core\AI 總論\wiki\concepts\相離.md
@@ -16578,6 +16613,7 @@
 *   core\AI 總論\wiki\concepts\閻王人.md
 *   core\AI 總論\wiki\concepts\阿夷哆雞舍劍婆利.md
 *   core\AI 總論\wiki\concepts\阿彌陀.md
+*   core\AI 總論\wiki\concepts\阿梨耶識.md
 *   core\AI 總論\wiki\concepts\阿羅漢.md
 *   core\AI 總論\wiki\concepts\阿耨多羅三藐三菩提.md
 *   core\AI 總論\wiki\concepts\阿耨多羅三藐三菩提心.md
@@ -16695,6 +16731,7 @@
 *   core\AI 總論\wiki\concepts\香華.md
 *   core\AI 總論\wiki\concepts\香陰.md
 *   core\AI 總論\wiki\concepts\馬鳴.md
+*   core\AI 總論\wiki\concepts\體大.md
 *   core\AI 總論\wiki\concepts\體用.md
 *   core\AI 總論\wiki\concepts\高大意.md
 *   core\AI 總論\wiki\concepts\鬪諍怨憎.md
@@ -16890,12 +16927,14 @@
 *   core\AI 龍樹\wiki\concepts\一相、無相.md
 *   core\AI 龍樹\wiki\concepts\三乘法.md
 *   core\AI 龍樹\wiki\concepts\三十七助道法.md
+*   core\AI 龍樹\wiki\concepts\三緣慈悲.md
 *   core\AI 龍樹\wiki\concepts\三轉十二行法輪.md
 *   core\AI 龍樹\wiki\concepts\不一不異.md
 *   core\AI 龍樹\wiki\concepts\不來不出.md
 *   core\AI 龍樹\wiki\concepts\不壞假名.md
 *   core\AI 龍樹\wiki\concepts\不常不斷.md
 *   core\AI 龍樹\wiki\concepts\不生.md
+*   core\AI 龍樹\wiki\concepts\不生不滅.md
 *   core\AI 龍樹\wiki\concepts\世間法.md
 *   core\AI 龍樹\wiki\concepts\中觀學派.md
 *   core\AI 龍樹\wiki\concepts\中論.md
@@ -16909,10 +16948,12 @@
 *   core\AI 龍樹\wiki\concepts\前際不可得.md
 *   core\AI 龍樹\wiki\concepts\去來.md
 *   core\AI 龍樹\wiki\concepts\四正懃.md
+*   core\AI 龍樹\wiki\concepts\因緣.md
 *   core\AI 龍樹\wiki\concepts\垢、淨.md
 *   core\AI 龍樹\wiki\concepts\外空.md
 *   core\AI 龍樹\wiki\concepts\妙喜世界.md
 *   core\AI 龍樹\wiki\concepts\度眾生.md
+*   core\AI 龍樹\wiki\concepts\戲論.md
 *   core\AI 龍樹\wiki\concepts\文字、語言.md
 *   core\AI 龍樹\wiki\concepts\有漏、無漏.md
 *   core\AI 龍樹\wiki\concepts\有為、無為.md
@@ -16928,11 +16969,13 @@
 *   core\AI 龍樹\wiki\concepts\無盡燈.md
 *   core\AI 龍樹\wiki\concepts\無等等心.md
 *   core\AI 龍樹\wiki\concepts\無能量.md
+*   core\AI 龍樹\wiki\concepts\無自性.md
 *   core\AI 龍樹\wiki\concepts\燃可燃.md
 *   core\AI 龍樹\wiki\concepts\生、住、滅.md
 *   core\AI 龍樹\wiki\concepts\生死、涅槃.md
 *   core\AI 龍樹\wiki\concepts\眾香國.md
 *   core\AI 龍樹\wiki\concepts\究竟相.md
+*   core\AI 龍樹\wiki\concepts\空.md
 *   core\AI 龍樹\wiki\concepts\罪、福.md
 *   core\AI 龍樹\wiki\concepts\色相.md
 *   core\AI 龍樹\wiki\concepts\菩薩心、聲聞心.md
@@ -16986,1951 +17029,10 @@
 *   core\Long_Classics\T0223_摩訶般若波羅蜜經_016-p_---.md
 *   core\Long_Classics\T0278_《大方廣佛華嚴經》.md
 *   core\Long_Classics\T0279_《大方廣佛華嚴經》.md
-*   core\Long_Classics\T0279_華嚴經_PageIndex_v8.md
+*   core\Long_Classics\T0279_華嚴經_PageIndex_v7.md
 *   core\Long_Classics\T0293_《大方廣佛華嚴經》.md
 *   core\Long_Classics\T0670_楞伽阿跋多羅寶經_wiki_---.md
 *   core\Long_Classics\T0670_楞伽阿跋多羅寶經_wiki_關聯.md
 *   core\Long_Classics\T0676_016.玄奘三藏譯撰全輯解深密經_-_唐_玄奘譯-台灣_王穆提_疏文斷句_版權說明.md
 *   core\Long_Classics\T0676_016.玄奘三藏譯撰全輯解深密經_-_唐_玄奘譯-台灣_王穆提_疏文斷句_贊助.md
-*   core\System_Docs\萬點大覺藏生成紀錄.md
-*   docs\ARCHITECTURE_v8.md
-*   docs\DESIGN_JUSTIFICATION.md
-*   docs\DROS-System-Report-v8.0.0.md
-*   docs\DROS_BOUNDARY.md
-*   docs\DROS_MANIFEST_v8.md
-*   docs\DROS_MICROKERNEL_SPEC.md
-*   docs\DROS_Sectarian_Validation_Report.md
-*   docs\LIMITATIONS_AND_DEFENSE.md
-*   docs\OBSIDIAN_PLUGIN_BLUEPRINT.md
-*   docs\PERFORMANCE_AND_HARDWARE.md
-*   docs\System_Prompt_v5.5.md
-*   docs\USER_GUIDE_v8.md
-*   docs\USER_GUIDE_v8_EN.md
-*   docs\devlog\six_paths_great_union.md
-*   inbox\AI 善導_wiki_三惡道.md
-*   inbox\AI 善導_wiki_不退轉.md
-*   inbox\AI 善導_wiki_大梵天王.md
-*   inbox\AI 善導_wiki_寶地.md
-*   inbox\AI 善導_wiki_度無極.md
-*   inbox\AI 善導_wiki_文殊師利.md
-*   inbox\AI 善導_wiki_智慧.md
-*   inbox\AI 善導_wiki_無相行.md
-*   inbox\AI 善導_wiki_瞋恚.md
-*   inbox\AI 善導_wiki_胎生.md
-*   inbox\AI 善導_wiki_釋迦牟尼佛.md
-*   inbox\AI 彌勒_wiki_佛功德.md
-*   inbox\AI 彌勒_wiki_偈頌.md
-*   inbox\AI 彌勒_wiki_利他.md
-*   inbox\AI 彌勒_wiki_忍辱波羅蜜.md
-*   inbox\AI 彌勒_wiki_濕生.md
-*   inbox\AI 彌勒_wiki_聖者.md
-*   inbox\AI 彌勒_wiki_苦趣.md
-*   inbox\AI 彌勒_wiki_迦旃延.md
-*   inbox\AI 彌勒_wiki_迦樓羅.md
-*   inbox\AI 龍樹_wiki_度眾生.md
-*   inbox\三世佛.md
-*   inbox\三惡道.md
-*   inbox\不動地.md
-*   inbox\不善法.md
-*   inbox\不退轉.md
-*   inbox\佛功德.md
-*   inbox\信願.md
-*   inbox\偈頌.md
-*   inbox\僧坊.md
-*   inbox\僧徒_damaged.md
-*   inbox\優婆提舍.md
-*   inbox\光明遍照.md
-*   inbox\分別心.md
-*   inbox\利他.md
-*   inbox\利養.md
-*   inbox\受持讀誦.md
-*   inbox\和合.md
-*   inbox\善女人.md
-*   inbox\善巧方便.md
-*   inbox\四天王天.md
-*   inbox\四流.md
-*   inbox\四無礙辯.md
-*   inbox\四無量心.md
-*   inbox\四聖諦.md
-*   inbox\圓成實自性.md
-*   inbox\境界.md
-*   inbox\大威德.md
-*   inbox\大慧菩薩.md
-*   inbox\大明.md
-*   inbox\大梵天王.md
-*   inbox\天帝釋.md
-*   inbox\天眼.md
-*   inbox\娑婆世界.md
-*   inbox\定慧.md
-*   inbox\寶地.md
-*   inbox\尼揵子.md
-*   inbox\希有心.md
-*   inbox\度無極.md
-*   inbox\度眾生.md
-*   inbox\德藏菩薩.md
-*   inbox\忍辱波羅蜜.md
-*   inbox\恒河.md
-*   inbox\悲智雙運.md
-*   inbox\應化身.md
-*   inbox\所染.md
-*   inbox\持戒清淨.md
-*   inbox\摩訶迦葉.md
-*   inbox\文殊師利.md
-*   inbox\斷煩惱.md
-*   inbox\方便善巧.md
-*   inbox\明常_damaged.md
-*   inbox\普賢菩薩勸發品.md
-*   inbox\普賢行.md
-*   inbox\智慧.md
-*   inbox\智慧力.md
-*   inbox\未來佛.md
-*   inbox\次第行.md
-*   inbox\正定.md
-*   inbox\歸命.md
-*   inbox\比丘眾.md
-*   inbox\法僧.md
-*   inbox\法自在.md
-*   inbox\波羅蜜多.md
-*   inbox\涅槃證.md
-*   inbox\減.md
-*   inbox\濕生.md
-*   inbox\無上正等正覺.md
-*   inbox\無功用行.md
-*   inbox\無為法.md
-*   inbox\無礙智.md
-*   inbox\無礙辯才.md
-*   inbox\無間.md
-*   inbox\煩惱相.md
-*   inbox\熏習.md
-*   inbox\獅子座.md
-*   inbox\甚深.md
-*   inbox\發菩提心.md
-*   inbox\眾緣.md
-*   inbox\知別.md
-*   inbox\福報.md
-*   inbox\福德智慧.md
-*   inbox\禮敬諸佛.md
-*   inbox\空處.md
-*   inbox\精進波羅蜜.md
-*   inbox\耳.md
-*   inbox\聖者.md
-*   inbox\聞慧.md
-*   inbox\胎生.md
-*   inbox\自利.md
-*   inbox\自性涅槃.md
-*   inbox\苦趣.md
-*   inbox\菩薩行願.md
-*   inbox\語言道斷.md
-*   inbox\諸佛境界.md
-*   inbox\諸法相.md
-*   inbox\證悟.md
-*   inbox\識無邊處.md
-*   inbox\護持正法.md
-*   inbox\貢高.md
-*   inbox\趙州無字的數位映射.md
-*   inbox\迦旃延.md
-*   inbox\迦樓羅.md
-*   inbox\那由他.md
-*   inbox\釋迦牟尼佛.md
-*   inbox\重宣.md
-*   inbox\開悟.md
-*   inbox\阿闍世.md
-*   inbox\阿鼻.md
-*   inbox\離垢三昧.md
-*   inbox\離垢藏三昧.md
-*   inbox\非想非非想處.md
-*   inbox\頓悟.md
-*   inbox\頭目腦髓.md
-*   inbox\魔波旬.md
-*   inbox\鳩槃茶.md
-*   proxy\__init__.py
-*   proxy\gemini_proxy.py
-*   proxy\__pycache__\__init__.cpython-312.pyc
-*   proxy\__pycache__\gemini_proxy.cpython-312.pyc
-*   scripts\inject_dna.bat
-*   scripts\run_cli.bat
-*   scripts\run_proxy.bat
-*   specs\DROS-RFC-001.md
-*   specs\DROS-RFC-002.md
-*   specs\DROS-RFC-003.md
-*   specs\DROS_Public_Terminology_and_Standards.md
-*   src\config.py
-*   src\engine\__init__.py
-*   src\engine\contract.py
-*   src\engine\dros_engine.py
-*   src\engine\guard_vm.py
-*   src\engine\__pycache__\__init__.cpython-312.pyc
-*   src\engine\__pycache__\contract.cpython-312.pyc
-*   src\engine\__pycache__\dros_engine.cpython-312.pyc
-*   src\engine\__pycache__\guard_vm.cpython-312.pyc
-*   src\pipeline\__init__.py
-*   src\pipeline\dna_enricher.py
-*   src\pipeline\__pycache__\__init__.cpython-312.pyc
-*   src\pipeline\__pycache__\dna_enricher.cpython-312.pyc
-*   src\retrieval\__init__.py
-*   src\retrieval\graphify.py
-*   src\retrieval\__pycache__\__init__.cpython-312.pyc
-*   src\retrieval\__pycache__\graphify.cpython-312.pyc
-*   src\__pycache__\config.cpython-312.pyc
-*   tools\dros_contract_ast.py
-*   tools\dros_dna_enricher.py
-*   tools\dros_guard_vm.py
-*   tools\dros_sdk_v8.py
-*   tools\gemini_proxy.py
-*   tools\雙擊執行-DROS金剛注射器.bat
-*   tools\contracts\default_vajra.yaml
-*   tools\obsidian-dros-copilot\.gitignore
-*   tools\obsidian-dros-copilot\README.md
-*   tools\obsidian-dros-copilot\System_Prompt_v5.5.md
-*   tools\obsidian-dros-copilot\main.js
-*   tools\obsidian-dros-copilot\main.js.map
-*   tools\obsidian-dros-copilot\main.ts
-*   tools\obsidian-dros-copilot\manifest.json
-*   tools\obsidian-dros-copilot\package-lock.json
-*   tools\obsidian-dros-copilot\package.json
-*   tools\obsidian-dros-copilot\styles.css
-*   tools\obsidian-dros-copilot\tsconfig.json
-*   tools\obsidian-dros-copilot\node_modules\.package-lock.json
-*   tools\obsidian-dros-copilot\node_modules\.bin\acorn
-*   tools\obsidian-dros-copilot\node_modules\.bin\acorn.cmd
-*   tools\obsidian-dros-copilot\node_modules\.bin\acorn.ps1
-*   tools\obsidian-dros-copilot\node_modules\.bin\tsc
-*   tools\obsidian-dros-copilot\node_modules\.bin\tsc.cmd
-*   tools\obsidian-dros-copilot\node_modules\.bin\tsc.ps1
-*   tools\obsidian-dros-copilot\node_modules\.bin\tsserver
-*   tools\obsidian-dros-copilot\node_modules\.bin\tsserver.cmd
-*   tools\obsidian-dros-copilot\node_modules\.bin\tsserver.ps1
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\CHANGELOG.md
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\README.md
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\package.json
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\dist\index.cjs
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\dist\index.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\dist\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\state\dist\index.js
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\CHANGELOG.md
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\README.md
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\package.json
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\dist\index.cjs
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\dist\index.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\dist\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@codemirror\view\dist\index.js
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\README.md
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\package.json
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.mjs
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.mjs.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.umd.js
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.umd.js.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\types\gen-mapping.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\types\set-array.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\types\sourcemap-segment.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\dist\types\types.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\src\gen-mapping.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\src\set-array.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\src\sourcemap-segment.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\src\types.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\gen-mapping.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\gen-mapping.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\gen-mapping.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\gen-mapping.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\set-array.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\set-array.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\set-array.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\set-array.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\sourcemap-segment.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\sourcemap-segment.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\sourcemap-segment.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\sourcemap-segment.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\types.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\types.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\types.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\gen-mapping\types\types.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\README.md
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\package.json
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\dist\remapping.mjs
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\dist\remapping.mjs.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\dist\remapping.umd.js
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\dist\remapping.umd.js.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\src\build-source-map-tree.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\src\remapping.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\src\source-map-tree.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\src\source-map.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\src\types.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\build-source-map-tree.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\build-source-map-tree.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\build-source-map-tree.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\build-source-map-tree.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\remapping.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\remapping.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\remapping.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\remapping.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map-tree.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map-tree.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map-tree.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map-tree.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\source-map.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\types.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\types.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\types.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\remapping\types\types.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\README.md
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\package.json
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\dist\resolve-uri.mjs
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\dist\resolve-uri.mjs.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\dist\resolve-uri.umd.js
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\dist\resolve-uri.umd.js.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\resolve-uri\dist\types\resolve-uri.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\README.md
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\package.json
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\dist\sourcemap-codec.mjs
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\dist\sourcemap-codec.mjs.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\dist\sourcemap-codec.umd.js
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\dist\sourcemap-codec.umd.js.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\src\scopes.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\src\sourcemap-codec.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\src\strings.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\src\vlq.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\scopes.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\scopes.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\scopes.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\scopes.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\sourcemap-codec.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\sourcemap-codec.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\sourcemap-codec.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\sourcemap-codec.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\strings.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\strings.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\strings.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\strings.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\vlq.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\vlq.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\vlq.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\sourcemap-codec\types\vlq.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\README.md
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\package.json
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\dist\trace-mapping.mjs
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\dist\trace-mapping.mjs.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\dist\trace-mapping.umd.js
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\dist\trace-mapping.umd.js.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\binary-search.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\by-source.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\flatten-map.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\resolve.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\sort.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\sourcemap-segment.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\strip-filename.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\trace-mapping.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\src\types.ts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\binary-search.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\binary-search.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\binary-search.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\binary-search.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\by-source.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\by-source.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\by-source.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\by-source.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\flatten-map.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\flatten-map.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\flatten-map.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\flatten-map.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\resolve.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\resolve.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\resolve.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\resolve.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sort.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sort.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sort.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sort.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sourcemap-segment.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sourcemap-segment.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sourcemap-segment.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\sourcemap-segment.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\strip-filename.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\strip-filename.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\strip-filename.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\strip-filename.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\trace-mapping.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\trace-mapping.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\trace-mapping.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\trace-mapping.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\types.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\types.d.cts.map
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\types.d.mts
-*   tools\obsidian-dros-copilot\node_modules\@jridgewell\trace-mapping\types\types.d.mts.map
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\README.md
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\package.json
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\rollup.config.js
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\dist\index.cjs
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\dist\index.d.cts
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\src\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\src\index.js
-*   tools\obsidian-dros-copilot\node_modules\@marijn\find-cluster-break\test\test-cluster.js
-*   tools\obsidian-dros-copilot\node_modules\@sveltejs\acorn-typescript\LICENSE.md
-*   tools\obsidian-dros-copilot\node_modules\@sveltejs\acorn-typescript\README.md
-*   tools\obsidian-dros-copilot\node_modules\@sveltejs\acorn-typescript\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@sveltejs\acorn-typescript\index.js
-*   tools\obsidian-dros-copilot\node_modules\@sveltejs\acorn-typescript\package.json
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\README.md
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\package.json
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\comment\comment.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\comment\continuecomment.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\dialog\dialog.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\display\autorefresh.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\display\fullscreen.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\display\panel.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\display\placeholder.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\display\rulers.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\edit\closebrackets.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\edit\closetag.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\edit\continuelist.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\edit\matchbrackets.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\edit\matchtags.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\edit\trailingspace.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\brace-fold.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\comment-fold.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\foldcode.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\foldgutter.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\indent-fold.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\markdown-fold.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\fold\xml-fold.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\anyword-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\css-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\html-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\javascript-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\show-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\sql-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\hint\xml-hint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\coffeescript-lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\css-lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\html-lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\javascript-lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\json-lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\lint\yaml-lint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\merge\merge.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\mode\loadMode.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\mode\multiplex.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\mode\overlay.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\mode\simple.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\runmode\colorize.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\runmode\runmode.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\scroll\annotatescrollbar.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\scroll\scrollpastend.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\scroll\simplescrollbars.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\search\jump-to-line.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\search\match-highlighter.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\search\matchesonscrollbar.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\search\search.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\search\searchcursor.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\selection\active-line.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\selection\mark-selection.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\selection\selection-pointer.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\tern\tern.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\addon\wrap\hardwrap.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\codemirror\mode\meta.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\estree\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@types\estree\README.md
-*   tools\obsidian-dros-copilot\node_modules\@types\estree\flow.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\estree\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\estree\package.json
-*   tools\obsidian-dros-copilot\node_modules\@types\tern\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@types\tern\README.md
-*   tools\obsidian-dros-copilot\node_modules\@types\tern\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\tern\package.json
-*   tools\obsidian-dros-copilot\node_modules\@types\tern\lib\infer\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\tern\lib\tern\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\trusted-types\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\@types\trusted-types\README.md
-*   tools\obsidian-dros-copilot\node_modules\@types\trusted-types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\@types\trusted-types\package.json
-*   tools\obsidian-dros-copilot\node_modules\@types\trusted-types\lib\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\acorn\CHANGELOG.md
-*   tools\obsidian-dros-copilot\node_modules\acorn\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\acorn\README.md
-*   tools\obsidian-dros-copilot\node_modules\acorn\package.json
-*   tools\obsidian-dros-copilot\node_modules\acorn\bin\acorn
-*   tools\obsidian-dros-copilot\node_modules\acorn\dist\acorn.d.mts
-*   tools\obsidian-dros-copilot\node_modules\acorn\dist\acorn.d.ts
-*   tools\obsidian-dros-copilot\node_modules\acorn\dist\acorn.js
-*   tools\obsidian-dros-copilot\node_modules\acorn\dist\acorn.mjs
-*   tools\obsidian-dros-copilot\node_modules\acorn\dist\bin.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\aria-query\README.md
-*   tools\obsidian-dros-copilot\node_modules\aria-query\package.json
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\ariaPropsMap.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\domMap.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\elementRoleMap.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\index.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\roleElementMap.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\rolesMap.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\ariaAbstractRoles.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\ariaDpubRoles.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\ariaGraphicsRoles.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\ariaLiteralRoles.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\commandRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\compositeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\inputRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\landmarkRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\rangeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\roletypeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\sectionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\sectionheadRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\selectRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\structureRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\widgetRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\abstract\windowRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docAbstractRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docAcknowledgmentsRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docAfterwordRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docAppendixRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docBacklinkRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docBiblioentryRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docBibliographyRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docBibliorefRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docChapterRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docColophonRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docConclusionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docCoverRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docCreditRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docCreditsRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docDedicationRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docEndnoteRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docEndnotesRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docEpigraphRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docEpilogueRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docErrataRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docExampleRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docFootnoteRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docForewordRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docGlossaryRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docGlossrefRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docIndexRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docIntroductionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docNoterefRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docNoticeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPagebreakRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPagefooterRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPageheaderRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPagelistRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPartRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPrefaceRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPrologueRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docPullquoteRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docQnaRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docSubtitleRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docTipRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\dpub\docTocRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\graphics\graphicsDocumentRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\graphics\graphicsObjectRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\graphics\graphicsSymbolRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\alertRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\alertdialogRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\applicationRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\articleRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\bannerRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\blockquoteRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\buttonRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\captionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\cellRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\checkboxRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\codeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\columnheaderRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\comboboxRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\complementaryRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\contentinfoRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\definitionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\deletionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\dialogRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\directoryRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\documentRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\emphasisRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\feedRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\figureRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\formRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\genericRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\graphicsDocumentRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\graphicsObjectRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\graphicsSymbolRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\gridRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\gridcellRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\groupRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\headingRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\imgRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\insertionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\linkRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\listRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\listboxRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\listitemRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\logRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\mainRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\markRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\marqueeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\mathRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\menuRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\menubarRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\menuitemRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\menuitemcheckboxRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\menuitemradioRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\meterRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\navigationRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\noneRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\noteRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\optionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\paragraphRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\presentationRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\progressbarRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\radioRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\radiogroupRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\regionRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\rowRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\rowgroupRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\rowheaderRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\scrollbarRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\searchRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\searchboxRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\separatorRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\sliderRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\spinbuttonRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\statusRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\strongRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\subscriptRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\superscriptRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\switchRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\tabRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\tableRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\tablistRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\tabpanelRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\termRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\textboxRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\timeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\timerRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\toolbarRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\tooltipRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\treeRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\treegridRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\etc\roles\literal\treeitemRole.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\util\iterationDecorator.js
-*   tools\obsidian-dros-copilot\node_modules\aria-query\lib\util\iteratorProxy.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\README.md
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\package.json
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\AXObjectElementMap.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\AXObjectRoleMap.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\AXObjectsMap.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\elementAXObjectMap.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\index.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\AbbrRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\AlertDialogRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\AlertRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\AnnotationRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ApplicationRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ArticleRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\AudioRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\BannerRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\BlockquoteRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\BusyIndicatorRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ButtonRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\CanvasRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\CaptionRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\CellRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\CheckBoxRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ColorWellRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ColumnHeaderRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ColumnRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ComboBoxRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ComplementaryRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ContentInfoRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DateRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DateTimeRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DefinitionRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DescriptionListDetailRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DescriptionListRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DescriptionListTermRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DetailsRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DialogRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DirectoryRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DisclosureTriangleRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DivRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\DocumentRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\EmbeddedObjectRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\FeedRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\FigcaptionRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\FigureRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\FooterRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\FormRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\GridRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\GroupRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\HeadingRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\IframePresentationalRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\IframeRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\IgnoredRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ImageMapLinkRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ImageMapRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ImageRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\InlineTextBoxRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\InputTimeRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\LabelRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\LegendRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\LineBreakRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\LinkRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ListBoxOptionRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ListBoxRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ListItemRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ListMarkerRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ListRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\LogRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MainRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MarkRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MarqueeRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MathRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuBarRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuButtonRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuItemCheckBoxRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuItemRadioRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuItemRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuListOptionRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuListPopupRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MenuRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\MeterRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\NavigationRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\NoneRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\NoteRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\OutlineRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ParagraphRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\PopUpButtonRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\PreRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\PresentationalRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ProgressIndicatorRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RadioButtonRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RadioGroupRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RegionRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RootWebAreaRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RowHeaderRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RowRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RubyRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\RulerRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SVGRootRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ScrollAreaRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ScrollBarRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SeamlessWebAreaRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SearchBoxRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SearchRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SliderRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SliderThumbRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SpinButtonPartRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SpinButtonRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SplitterRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\StaticTextRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\StatusRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\SwitchRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TabGroupRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TabListRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TabPanelRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TabRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TableHeaderContainerRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TableRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TermRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TextAreaRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TextFieldRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TimeRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TimerRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ToggleButtonRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\ToolbarRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TreeGridRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TreeItemRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\TreeRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\UserInterfaceTooltipRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\VideoRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\WebAreaRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\etc\objects\WindowRole.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\util\iterationDecorator.js
-*   tools\obsidian-dros-copilot\node_modules\axobject-query\lib\util\iteratorProxy.js
-*   tools\obsidian-dros-copilot\node_modules\clsx\clsx.d.mts
-*   tools\obsidian-dros-copilot\node_modules\clsx\clsx.d.ts
-*   tools\obsidian-dros-copilot\node_modules\clsx\license
-*   tools\obsidian-dros-copilot\node_modules\clsx\package.json
-*   tools\obsidian-dros-copilot\node_modules\clsx\readme.md
-*   tools\obsidian-dros-copilot\node_modules\clsx\dist\clsx.js
-*   tools\obsidian-dros-copilot\node_modules\clsx\dist\clsx.min.js
-*   tools\obsidian-dros-copilot\node_modules\clsx\dist\clsx.mjs
-*   tools\obsidian-dros-copilot\node_modules\clsx\dist\lite.js
-*   tools\obsidian-dros-copilot\node_modules\clsx\dist\lite.mjs
-*   tools\obsidian-dros-copilot\node_modules\crelt\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\crelt\README.md
-*   tools\obsidian-dros-copilot\node_modules\crelt\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\crelt\index.js
-*   tools\obsidian-dros-copilot\node_modules\crelt\package.json
-*   tools\obsidian-dros-copilot\node_modules\crelt\rollup.config.js
-*   tools\obsidian-dros-copilot\node_modules\crelt\dist\index.cjs
-*   tools\obsidian-dros-copilot\node_modules\crelt\dist\index.d.cts
-*   tools\obsidian-dros-copilot\node_modules\devalue\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\devalue\README.md
-*   tools\obsidian-dros-copilot\node_modules\devalue\index.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\package.json
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\base64.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\base64.test.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\constants.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\parse.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\stringify.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\types.d.ts
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\uneval.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\utils.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\src\utils.test.js
-*   tools\obsidian-dros-copilot\node_modules\devalue\types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\devalue\types\index.d.ts.map
-*   tools\obsidian-dros-copilot\node_modules\esm-env\CHANGELOG.md
-*   tools\obsidian-dros-copilot\node_modules\esm-env\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\esm-env\README.md
-*   tools\obsidian-dros-copilot\node_modules\esm-env\browser-fallback.js
-*   tools\obsidian-dros-copilot\node_modules\esm-env\dev-fallback.js
-*   tools\obsidian-dros-copilot\node_modules\esm-env\false.js
-*   tools\obsidian-dros-copilot\node_modules\esm-env\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esm-env\index.js
-*   tools\obsidian-dros-copilot\node_modules\esm-env\package.json
-*   tools\obsidian-dros-copilot\node_modules\esm-env\true.js
-*   tools\obsidian-dros-copilot\node_modules\esrap\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\esrap\README.md
-*   tools\obsidian-dros-copilot\node_modules\esrap\package.json
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\context.js
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\index.js
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\public.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\types.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\languages\types.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\languages\ts\index.js
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\languages\ts\public.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\languages\tsx\index.js
-*   tools\obsidian-dros-copilot\node_modules\esrap\src\languages\tsx\public.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esrap\types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\esrap\types\index.d.ts.map
-*   tools\obsidian-dros-copilot\node_modules\is-reference\README.md
-*   tools\obsidian-dros-copilot\node_modules\is-reference\package.json
-*   tools\obsidian-dros-copilot\node_modules\is-reference\src\index.js
-*   tools\obsidian-dros-copilot\node_modules\is-reference\types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\is-reference\types\index.d.ts.map
-*   tools\obsidian-dros-copilot\node_modules\locate-character\README.md
-*   tools\obsidian-dros-copilot\node_modules\locate-character\package.json
-*   tools\obsidian-dros-copilot\node_modules\locate-character\src\index.js
-*   tools\obsidian-dros-copilot\node_modules\locate-character\src\types.d.ts
-*   tools\obsidian-dros-copilot\node_modules\locate-character\types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\locate-character\types\index.d.ts.map
-*   tools\obsidian-dros-copilot\node_modules\magic-string\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\magic-string\README.md
-*   tools\obsidian-dros-copilot\node_modules\magic-string\package.json
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.cjs.d.ts
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.cjs.js
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.cjs.js.map
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.es.d.mts
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.es.mjs
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.es.mjs.map
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.umd.js
-*   tools\obsidian-dros-copilot\node_modules\magic-string\dist\magic-string.umd.js.map
-*   tools\obsidian-dros-copilot\node_modules\moment\CHANGELOG.md
-*   tools\obsidian-dros-copilot\node_modules\moment\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\moment\README.md
-*   tools\obsidian-dros-copilot\node_modules\moment\ender.js
-*   tools\obsidian-dros-copilot\node_modules\moment\moment.d.ts
-*   tools\obsidian-dros-copilot\node_modules\moment\moment.js
-*   tools\obsidian-dros-copilot\node_modules\moment\package.js
-*   tools\obsidian-dros-copilot\node_modules\moment\package.json
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\moment.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\af.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar-dz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar-kw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar-ly.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar-ma.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar-sa.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar-tn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ar.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\az.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\be.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\bg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\bm.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\bn-bd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\bn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\bo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\br.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\bs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\cs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\cv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\cy.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\da.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\de-at.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\de-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\de.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\dv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\el.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-au.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-gb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-ie.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-il.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-in.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-nz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\en-sg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\eo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\es-do.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\es-mx.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\es-us.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\es.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\et.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\eu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fa.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fil.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fr-ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fr-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\fy.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ga.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\gd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\gl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\gom-deva.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\gom-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\gu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\he.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\hi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\hr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\hu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\hy-am.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\id.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\is.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\it-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\it.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ja.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\jv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ka.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\kk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\km.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\kn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ko.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ku.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ky.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\lb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\lo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\lt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\lv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\me.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\mi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\mk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ml.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\mn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\mr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ms-my.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ms.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\mt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\my.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\nb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ne.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\nl-be.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\nl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\nn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\oc-lnc.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\pa-in.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\pl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\pt-br.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\pt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ro.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ru.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\se.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\si.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sq.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sr-cyrl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ss.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\sw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ta.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\te.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tet.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\th.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tl-ph.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tlh.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tzl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tzm-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\tzm.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ug-cn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\uk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\ur.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\uz-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\uz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\vi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\x-pseudo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\yo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\zh-cn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\zh-hk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\zh-mo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\dist\locale\zh-tw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\af.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar-dz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar-kw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar-ly.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar-ma.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar-sa.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar-tn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ar.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\az.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\be.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\bg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\bm.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\bn-bd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\bn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\bo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\br.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\bs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\cs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\cv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\cy.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\da.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\de-at.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\de-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\de.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\dv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\el.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-au.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-gb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-ie.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-il.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-in.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-nz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\en-sg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\eo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\es-do.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\es-mx.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\es-us.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\es.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\et.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\eu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fa.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fil.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fr-ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fr-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\fy.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ga.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\gd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\gl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\gom-deva.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\gom-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\gu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\he.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\hi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\hr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\hu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\hy-am.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\id.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\is.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\it-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\it.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ja.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\jv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ka.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\kk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\km.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\kn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ko.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ku.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ky.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\lb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\lo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\lt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\lv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\me.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\mi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\mk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ml.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\mn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\mr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ms-my.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ms.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\mt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\my.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\nb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ne.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\nl-be.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\nl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\nn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\oc-lnc.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\pa-in.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\pl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\pt-br.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\pt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ro.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ru.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\se.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\si.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sq.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sr-cyrl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ss.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\sw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ta.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\te.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tet.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\th.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tl-ph.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tlh.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tzl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tzm-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\tzm.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ug-cn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\uk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\ur.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\uz-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\uz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\vi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\x-pseudo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\yo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\zh-cn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\zh-hk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\zh-mo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\locale\zh-tw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\min\locales.js
-*   tools\obsidian-dros-copilot\node_modules\moment\min\locales.min.js
-*   tools\obsidian-dros-copilot\node_modules\moment\min\locales.min.js.map
-*   tools\obsidian-dros-copilot\node_modules\moment\min\moment-with-locales.js
-*   tools\obsidian-dros-copilot\node_modules\moment\min\moment-with-locales.min.js
-*   tools\obsidian-dros-copilot\node_modules\moment\min\moment-with-locales.min.js.map
-*   tools\obsidian-dros-copilot\node_modules\moment\min\moment.min.js
-*   tools\obsidian-dros-copilot\node_modules\moment\min\moment.min.js.map
-*   tools\obsidian-dros-copilot\node_modules\moment\src\moment.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\check-overflow.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\date-from-array.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\from-anything.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\from-array.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\from-object.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\from-string-and-array.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\from-string-and-format.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\from-string.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\local.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\parsing-flags.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\utc.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\create\valid.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\abs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\add-subtract.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\as.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\bubble.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\clone.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\constructor.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\create.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\duration.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\get.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\humanize.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\iso-string.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\prototype.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\duration\valid.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\format\format.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\base-config.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\calendar.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\constructor.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\en.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\formats.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\invalid.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\lists.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\locale.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\locales.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\ordinal.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\pre-post-format.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\prototype.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\relative.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\locale\set.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\add-subtract.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\calendar.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\clone.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\compare.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\constructor.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\creation-data.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\diff.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\format.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\from.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\get-set.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\locale.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\min-max.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\moment.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\now.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\prototype.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\start-end-of.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\to-type.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\to.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\moment\valid.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\parse\regex.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\parse\token.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\aliases.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\constants.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\day-of-month.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\day-of-week.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\day-of-year.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\era.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\hour.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\millisecond.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\minute.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\month.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\offset.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\priorities.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\quarter.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\second.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\timestamp.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\timezone.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\units.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\week-calendar-utils.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\week-year.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\week.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\units\year.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\abs-ceil.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\abs-floor.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\abs-round.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\compare-arrays.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\defaults.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\deprecate.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\extend.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\has-own-prop.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\hooks.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\index-of.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-array.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-calendar-spec.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-date.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-function.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-leap-year.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-moment-input.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-number.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-object-empty.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-object.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-string.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\is-undefined.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\keys.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\map.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\mod.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\some.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\to-int.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\lib\utils\zero-fill.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\af.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar-dz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar-kw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar-ly.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar-ma.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar-sa.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar-tn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ar.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\az.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\be.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\bg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\bm.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\bn-bd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\bn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\bo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\br.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\bs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\cs.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\cv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\cy.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\da.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\de-at.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\de-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\de.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\dv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\el.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-au.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-gb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-ie.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-il.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-in.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-nz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\en-sg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\eo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\es-do.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\es-mx.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\es-us.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\es.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\et.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\eu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fa.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fil.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fr-ca.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fr-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\fy.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ga.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\gd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\gl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\gom-deva.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\gom-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\gu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\he.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\hi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\hr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\hu.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\hy-am.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\id.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\is.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\it-ch.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\it.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ja.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\jv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ka.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\kk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\km.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\kn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ko.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ku.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ky.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\lb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\lo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\lt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\lv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\me.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\mi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\mk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ml.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\mn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\mr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ms-my.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ms.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\mt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\my.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\nb.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ne.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\nl-be.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\nl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\nn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\oc-lnc.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\pa-in.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\pl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\pt-br.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\pt.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ro.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ru.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sd.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\se.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\si.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sq.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sr-cyrl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ss.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sv.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\sw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ta.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\te.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tet.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tg.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\th.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tl-ph.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tlh.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tr.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tzl.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tzm-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\tzm.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ug-cn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\uk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\ur.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\uz-latn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\uz.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\vi.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\x-pseudo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\yo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\zh-cn.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\zh-hk.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\zh-mo.js
-*   tools\obsidian-dros-copilot\node_modules\moment\src\locale\zh-tw.js
-*   tools\obsidian-dros-copilot\node_modules\moment\ts3.1-typings\moment.d.ts
-*   tools\obsidian-dros-copilot\node_modules\obsidian\CHANGELOG.md
-*   tools\obsidian-dros-copilot\node_modules\obsidian\LICENSE.md
-*   tools\obsidian-dros-copilot\node_modules\obsidian\README.md
-*   tools\obsidian-dros-copilot\node_modules\obsidian\canvas.d.ts
-*   tools\obsidian-dros-copilot\node_modules\obsidian\obsidian.d.ts
-*   tools\obsidian-dros-copilot\node_modules\obsidian\package.json
-*   tools\obsidian-dros-copilot\node_modules\obsidian\publish.d.ts
-*   tools\obsidian-dros-copilot\node_modules\obsidian\undo.patch
-*   tools\obsidian-dros-copilot\node_modules\style-mod\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\style-mod\README.md
-*   tools\obsidian-dros-copilot\node_modules\style-mod\package.json
-*   tools\obsidian-dros-copilot\node_modules\style-mod\dist\style-mod.cjs
-*   tools\obsidian-dros-copilot\node_modules\style-mod\dist\style-mod.d.cts
-*   tools\obsidian-dros-copilot\node_modules\style-mod\src\README.md
-*   tools\obsidian-dros-copilot\node_modules\style-mod\src\style-mod.d.ts
-*   tools\obsidian-dros-copilot\node_modules\style-mod\src\style-mod.js
-*   tools\obsidian-dros-copilot\node_modules\style-mod\test\test-style-mod.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\LICENSE.md
-*   tools\obsidian-dros-copilot\node_modules\svelte\README.md
-*   tools\obsidian-dros-copilot\node_modules\svelte\action.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\animate.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\compiler.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\easing.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\elements.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\legacy.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\motion.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\package.json
-*   tools\obsidian-dros-copilot\node_modules\svelte\store.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\svelte-html.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\transition.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\compiler\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\compiler\package.json
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\constants.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\escaping.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\html-tree-validation.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\index-client.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\index-server.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\version.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\animate\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\attachments\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\errors.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\legacy.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\state.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\validate-options.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\warnings.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\migrate\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\bindings.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\css.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\nodes.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\patterns.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\scope.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\acorn.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\remove_typescript_nodes.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\read\context.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\read\expression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\read\options.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\read\script.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\read\style.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\state\element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\state\fragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\state\tag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\state\text.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\utils\bracket.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\utils\create.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\utils\entities.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\utils\fuzzymatch.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\1-parse\utils\html.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\css\css-analyze.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\css\css-prune.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\css\css-warn.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\css\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\utils\check_graph_for_cycles.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\AnimateDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ArrowFunctionExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\AssignmentExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\AttachTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\Attribute.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\AwaitBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\AwaitExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\BindDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\CallExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ClassBody.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ClassDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ClassDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\Component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ConstTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\DebugTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\EachBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ExportDefaultDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ExportNamedDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ExportSpecifier.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ExpressionStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ExpressionTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\Fragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\FunctionDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\FunctionExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\HtmlTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\Identifier.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\IfBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\ImportDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\KeyBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\LabeledStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\LetDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\Literal.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\MemberExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\NewExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\OnDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\PropertyDefinition.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\RegularElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\RenderTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SlotElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SnippetBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SpreadAttribute.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SpreadElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\StyleDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteBody.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteBoundary.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteComponent.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteDocument.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteFragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteHead.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteSelf.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\SvelteWindow.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\TaggedTemplateExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\TemplateElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\Text.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\TitleElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\TransitionDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\UpdateExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\UseDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\VariableDeclarator.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\attribute.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\fragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\function.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\snippets.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\special-element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\a11y\constants.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\2-analyze\visitors\shared\a11y\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\transform-client.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\transform-template\fix-attribute-casing.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\transform-template\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\transform-template\template.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\AnimateDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\ArrowFunctionExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\AssignmentExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\AttachTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\Attribute.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\AwaitBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\AwaitExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\BinaryExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\BindDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\BlockStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\BreakStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\CallExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\ClassBody.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\Comment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\Component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\ConstTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\DebugTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\EachBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\ExportNamedDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\ExpressionStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\ForOfStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\Fragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\FunctionDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\FunctionExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\HtmlTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\Identifier.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\IfBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\KeyBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\LabeledStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\LetDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\MemberExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\OnDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\Program.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\RegularElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\RenderTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SlotElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SnippetBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SpreadAttribute.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteBody.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteBoundary.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteComponent.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteDocument.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteFragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteHead.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteSelf.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\SvelteWindow.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\TitleElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\TransitionDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\UpdateExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\UseDirective.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\VariableDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\declarations.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\events.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\fragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\function.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\special_element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\client\visitors\shared\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\css\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\transform-server.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\AssignmentExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\AwaitBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\AwaitExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\CallExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\ClassBody.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\Component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\ConstTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\DebugTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\EachBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\ExpressionStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\Fragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\HtmlTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\Identifier.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\IfBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\KeyBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\LabeledStatement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\MemberExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\Program.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\PropertyDefinition.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\RegularElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\RenderTag.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SlotElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SnippetBlock.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SpreadAttribute.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SvelteBoundary.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SvelteComponent.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SvelteElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SvelteFragment.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SvelteHead.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\SvelteSelf.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\TitleElement.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\UpdateExpression.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\VariableDeclaration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\shared\component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\shared\element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\server\visitors\shared\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\shared\assignments.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\phases\3-transform\shared\transform-async.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\preprocess\decode_sourcemap.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\preprocess\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\preprocess\replace_in_code.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\print\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\assert.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\ast.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\builders.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\compile_diagnostic.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\extract_svelte_ignore.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\mapped_code.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\push_array.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\sanitize_template_string.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\slot.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\compiler\utils\string.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\easing\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\events\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\disclose-version.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\constants.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\context.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\error-handling.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\errors.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\hydratable.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\legacy.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\loop.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\proxy.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\render.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\runtime.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\timing.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\validate.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\warnings.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\assign.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\console-log.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\css.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\debug.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\elements.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\equality.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\hmr.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\inspect.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\legacy.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\ownership.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\tracing.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dev\validation.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\css.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\hydration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\operations.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\reconciler.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\task.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\template.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\async.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\await.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\boundary.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\branches.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\css-props.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\each.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\html.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\if.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\key.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\slot.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\snippet.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\svelte-component.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\svelte-element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\blocks\svelte-head.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\actions.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\attachments.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\attributes.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\class.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\custom-element.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\customizable-select.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\events.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\misc.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\style.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\transitions.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\document.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\input.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\media.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\navigator.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\props.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\select.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\shared.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\size.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\this.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\universal.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\elements\bindings\window.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\legacy\event-modifiers.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\legacy\lifecycle.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\dom\legacy\misc.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\async.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\batch.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\deriveds.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\effects.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\equality.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\props.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\sources.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\status.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\store.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\client\reactivity\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\flags\async.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\flags\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\flags\legacy.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\flags\tracing.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\abort-signal.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\context.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\crypto.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\dev.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\errors.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\hydratable.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\hydration.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\render-context.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\renderer.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\warnings.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\blocks\html.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\server\blocks\snippet.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\attributes.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\clone.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\dev.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\errors.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\validate.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\internal\shared\warnings.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\legacy\legacy-client.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\legacy\legacy-server.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\motion\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\motion\spring.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\motion\tweened.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\motion\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\create-subscriber.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\date.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\index-client.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\index-server.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\map.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\media-query.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\reactive-value.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\set.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\url-search-params.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\url.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\reactivity\window\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\server\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\store\index-client.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\store\index-server.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\store\utils.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\store\shared\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\src\transition\index.js
-*   tools\obsidian-dros-copilot\node_modules\svelte\types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\types\index.d.ts.map
-*   tools\obsidian-dros-copilot\node_modules\svelte\types\compiler\interfaces.d.ts
-*   tools\obsidian-dros-copilot\node_modules\svelte\types\compiler\preprocess.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\LICENSE.txt
-*   tools\obsidian-dros-copilot\node_modules\typescript\README.md
-*   tools\obsidian-dros-copilot\node_modules\typescript\SECURITY.md
-*   tools\obsidian-dros-copilot\node_modules\typescript\ThirdPartyNoticeText.txt
-*   tools\obsidian-dros-copilot\node_modules\typescript\package.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\bin\tsc
-*   tools\obsidian-dros-copilot\node_modules\typescript\bin\tsserver
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\_tsc.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\_tsserver.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\_typingsInstaller.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.decorators.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.decorators.legacy.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.dom.asynciterable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.dom.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.dom.iterable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.collection.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.core.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.generator.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.iterable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.promise.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.proxy.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.reflect.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.symbol.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2016.array.include.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2016.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2016.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2016.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.arraybuffer.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.date.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.object.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.string.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2017.typedarrays.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.asyncgenerator.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.asynciterable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.promise.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2018.regexp.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.array.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.object.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.string.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2019.symbol.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.bigint.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.date.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.number.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.promise.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.sharedmemory.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.string.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2020.symbol.wellknown.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2021.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2021.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2021.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2021.promise.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2021.string.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2021.weakref.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.array.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.error.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.object.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.regexp.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2022.string.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2023.array.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2023.collection.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2023.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2023.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2023.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.arraybuffer.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.collection.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.object.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.promise.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.regexp.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.sharedmemory.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2024.string.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.collection.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.float16.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.iterator.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.promise.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es2025.regexp.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es5.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.es6.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.array.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.collection.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.date.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.decorators.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.disposable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.error.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.full.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.intl.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.sharedmemory.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.temporal.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.esnext.typedarrays.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.scripthost.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.webworker.asynciterable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.webworker.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.webworker.importscripts.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\lib.webworker.iterable.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\tsc.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\tsserver.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\tsserverlibrary.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\tsserverlibrary.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\typesMap.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\typescript.d.ts
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\typescript.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\typingsInstaller.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\watchGuard.js
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\cs\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\de\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\es\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\fr\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\it\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\ja\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\ko\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\pl\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\pt-br\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\ru\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\tr\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\zh-cn\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\typescript\lib\zh-tw\diagnosticMessages.generated.json
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\.tern-port
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\README.md
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\index.cjs
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\index.d.cts
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\index.js
-*   tools\obsidian-dros-copilot\node_modules\w3c-keyname\package.json
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\LICENSE
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\README.md
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\package.json
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\src\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\src\types.d.ts
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\src\walk.js
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\types\index.d.ts
-*   tools\obsidian-dros-copilot\node_modules\zimmerframe\types\index.d.ts.map
-*   tools\__pycache__\dros_ai_bridge.cpython-312.pyc
-*   tools\__pycache__\dros_contract_ast.cpython-312.pyc
-*   tools\__pycache__\dros_guard_vm.cpython-312.pyc
-*   User_Pavilion\Insights\Test_Note.md
-*   Vault_DajueZang\大覺藏存放說明.md
-*   __pycache__\gemini_proxy.cpython-312.pyc
+*   core\佛堂大門.md
