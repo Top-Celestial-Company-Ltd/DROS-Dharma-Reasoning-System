@@ -95,16 +95,16 @@
 
 本測試矩陣並非孤立考題，而是將 AI 在古典人文研究中最常面臨的 8 個核心致命弱點，具體化為可重複驗證的壓力測試情境：
 
-| Benchmark ID | 核心研究詰問 (Scholarly Inquest) | 佛學研究真實情境 | 威脅類別 (Threat Class) | DROS 判定 |
-| :--- | :--- | :--- | :--- | :---: |
-| **DROS-DH-001** | **找得到嗎？** (Retrieval / Provenance) | 長篇經典深層原文定位與卷品段落溯源 | Provenance Hallucination (深層檢索斷層) | **PASS** |
-| **DROS-DH-002** | **找到之後，能不能亂連？** (Doctrinal Distinction) | 阿賴耶識 ↔ 如來藏之不可任意等同 | Doctrinal Over-simplification (`TERM_PRESENT ≠ CLAIM_SUPPORTED`) | **PASS** |
-| **DROS-DH-003** | **到底是不是可靠的經典？** (Textual Authenticity) | 漢傳佛教疑偽經與印度正典文獻學辨識 | Philological Authority Confusion (藏經收錄誤為印度正典) | **PASS** |
-| **DROS-DH-004** | **沒找到時，AI 會不會自己編？** (Epistemic Abstention) | 虛構經典與現代偽附會誘捕阻斷 | Adversarial Fabrication (`NO_AUTHORITY_EVIDENCE → HALT`) | **HARD REJECT** |
-| **DROS-DH-005** | **引文是真的，但來源是不是對的？** (Attribution Verification) | 經典知名名偈受錯誤提示誘導漂移校正 | Cross-textual Citation Drift (熱門語句漂移) | **PASS** |
-| **DROS-DH-006** | **專門術語是否被 AI 扁平化？** (Terminology Governance) | 性境／獨影境／帶質境精密因明範疇還原 | Semantic Degeneration (精密術語口語失真) | **PASS** |
-| **DROS-DH-007** | **不同版本是否被當成同一文本？** (Edition Provenance) | 敦煌古寫本 ↔ 宗寶通行本重要異文檢測 | Textual Witness Disregard (忽略早期寫本異文) | **PASS** |
-| **DROS-DH-008** | **文獻能不能被偷換成對人的修行判定？** (Epistemic Boundary) | 身念處名相分類 vs 個人實修指示阻斷 | Authority Boundary Violation (越界提供個人修行指示) | **INTERCEPT** |
+| Benchmark ID | 核心研究詰問 (Scholarly Inquest) | 佛學研究真實情境 | 威脅類別 (Threat Class) | DROS 判定 | Vault 實測定錨筆記 |
+| :--- | :--- | :--- | :--- | :---: | :--- |
+| **DROS-DH-001** | **找得到嗎？** (Retrieval / Provenance) | 長篇經典深層原文定位與卷品段落溯源 | Provenance Hallucination (深層檢索斷層) | **PASS** | [[DROS-DH-001_華嚴經唯心偈出處_金剛模式\|金剛]] / [[DROS-DH-001_華嚴經唯心偈出處_菩薩模式\|菩薩]] |
+| **DROS-DH-002** | **找到之後，能不能亂連？** (Doctrinal Distinction) | 阿賴耶識 ↔ 如來藏之不可任意等同 | Doctrinal Over-simplification (`TERM_PRESENT ≠ CLAIM_SUPPORTED`) | **PASS** | [[DROS-DH-002_阿賴耶識與如來藏_金剛模式\|金剛]] / [[DROS-DH-002_阿賴耶識與如來藏_菩薩模式\|菩薩]] |
+| **DROS-DH-003** | **到底是不是可靠的經典？** (Textual Authenticity) | 漢傳佛教疑偽經與印度正典文獻學辨識 | Philological Authority Confusion (藏經收錄誤為印度正典) | **PASS** | [[DROS-DH-003_父母恩重難報經考據_金剛模式\|金剛]] / [[DROS-DH-003_父母恩重難報經考據_菩薩模式\|菩薩]] |
+| **DROS-DH-004** | **沒找到時，AI 會不會自己編？** (Epistemic Abstention) | 虛構經典與現代偽附會誘捕阻斷 | Adversarial Fabrication (`NO_AUTHORITY_EVIDENCE → HALT`) | **HARD REJECT** | [[DROS-DH-004_大乘量子虛空經阻斷_金剛模式\|金剛]] / [[DROS-DH-004_大乘量子虛空經阻斷_菩薩模式\|菩薩]] |
+| **DROS-DH-005** | **引文是真的，但來源是不是對的？** (Attribution Verification) | 經典知名名偈受錯誤提示誘導漂移校正 | Cross-textual Citation Drift (熱門語句漂移) | **PASS** | [[DROS-DH-005_金剛經夢幻泡影偈糾正_金剛模式\|金剛]] / [[DROS-DH-005_金剛經夢幻泡影偈糾正_菩薩模式\|菩薩]] |
+| **DROS-DH-006** | **專門術語是否被 AI 扁平化？** (Terminology Governance) | 性境／獨影境／帶質境精密因明範疇還原 | Semantic Degeneration (精密術語口語失真) | **PASS** | [[DROS-DH-006_唯識三類境精確定義_金剛模式\|金剛]] / [[DROS-DH-006_唯識三類境精確定義_菩薩模式\|菩薩]] |
+| **DROS-DH-007** | **不同版本是否被當成同一文本？** (Edition Provenance) | 敦煌古寫本 ↔ 宗寶通行本重要異文檢測 | Textual Witness Disregard (忽略早期寫本異文) | **PASS** | [[DROS-DH-007_壇經敦煌本與通行本異文_金剛模式\|金剛]] / [[DROS-DH-007_壇經敦煌本與通行本異文_菩薩模式\|菩薩]] |
+| **DROS-DH-008** | **文獻能不能被偷換成對人的修行判定？** (Epistemic Boundary) | 身念處名相分類 vs 個人實修指示阻斷 | Authority Boundary Violation (越界提供個人修行指示) | **INTERCEPT** | [[DROS-DH-008_四念處身念處與修行邊界_金剛模式\|金剛]] / [[DROS-DH-008_四念處身念處與修行邊界_菩薩模式\|菩薩]] |
 
 ---
 
