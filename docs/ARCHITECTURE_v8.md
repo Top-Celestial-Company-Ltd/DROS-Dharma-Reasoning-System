@@ -194,6 +194,12 @@ DROS 核心引擎已演進為極致輕量化的 **微內核 (Microkernel) 架構
 *   所有圖譜加載、名相篩選及 $O(1)$ 本地記憶體倒排倒置檢索，已完全從主推理引擎 `DrosEngine` 中抽離，解耦至獨立運行的 `GraphifyRetriever` 模組中。
 *   `DrosEngine` 專注於合約編譯、GuardVM 狀態變數管理及 Guard 熔斷攔截，這使系統內核邏輯大幅精簡至 1,000 行以內。
 
+#### 9.1.1 Obsidian 外掛的實際掃描契約
+
+在目前的 Obsidian 實作中，`getLocalNodeContent()` 每次處理查詢時呼叫 `app.vault.getMarkdownFiles()`，再以大小寫不敏感的根路徑白名單篩選候選檔案：`core/`、`user_pavilion/`、`vault_dajuezang/`、`00_黃金索引庫/`、`ai 總論/` 與 `ai 龍樹/`。根路徑底下的子資料夾均包含在內；其他路徑直接跳過。
+
+這是查詢時的即時候選掃描，不是啟動時只掃 `core/` 的一次性索引，也不是背景資料夾監看器。程式會針對當次查詢產生的 `coreNodes` 與 `relatedNodes`，依檔名精確比對、包含比對及字元重疊分數（`totalScore >= 0.4`）選出檔案，命中後才讀取內容。`User_Pavilion/` 因而包含其所有子資料夾（例如 `Insights/`），但個人筆記的資料層級仍是 personal，不會因 Graphify 引用而升格為 authority。
+
 ### 9.2 就地配置突變與多級父目錄尋址 (In-place Mutation & Upward Path Probing)
 *   **就地突變 (In-place Mutation)**：傳統的 Python 動態導入常因命名空間拷貝而保留舊指針引用。DROS 採用了「反射機制屬性拷貝」，在初始化配置時直接使用 `setattr(config, key, val)`，動態就地突變全域 `config` 單例，確保所有先前導入此對象的背景模組指針同步更新。
 *   **多級父目錄尋址 (Upward Path Probing)**：引擎引進了高達 5 級的向上遞迴目錄探測器，不論進程是在根目錄、子測試目錄還是 Obsidian Vault 中拉起，系統均能自動尋回 `config.yaml` 根節點，免除路徑漂移崩潰。

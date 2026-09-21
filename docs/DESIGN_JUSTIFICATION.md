@@ -34,14 +34,9 @@ DROS 拋棄了傳統的 SQL/NoSQL 資料庫，直接將本機作業系統原生�
 
 ### 🚀 DROS 的極速記憶體定錨解決方案：
 
-DROS 絕不在每次用戶查詢時去觸碰硬碟。系統運作嚴格遵循 **「讀寫分離與內存索引預熱」**：
+DROS 的 Obsidian 外掛實作不採用「啟動時只掃 `core/` 並建立永久 Graphify 索引」的模型。`getLocalNodeContent()` 在每次查詢時呼叫 `app.vault.getMarkdownFiles()`，依白名單重新篩選候選，並在檔名命中後按需讀取內容。這使使用者新增的 `User_Pavilion/` 筆記能在下一次提問時參與匹配，但不需要背景監看器或離線圖資料庫。
 
-1. **內存索引預熱 (In-Memory Index Warm-up)**：
-   * 在系統啟動（Start-up）時，DROS 微內核的 `GraphifyRetriever` 模組會對 `core/` 目錄進行**一次性物理掃描**。
-   * 將這 36,057 個節點的拓撲關係、T-Number 座標與核心義理，編譯成一組輕量化的高效 Python Dictionary 物件常駐於 RAM（隨機存取記憶體）中。
-2. **$O(1)$ 複雜度雜湊尋址 (Hash-map Table lookup)**：
-   * 當線上使用者（或 Obsidian Copilot）發送查詢請求時，DROS 直接在**記憶體中進行 $O(1)$ 複雜度的變數讀取**，完全繞過物理磁碟 I/O。
-   * 讀取 36,057 個硬化節點的索引僅佔用 **50MB - 100MB RAM**。因為 footprint（記憶體佔用）極度微小，多個 Uvicorn ASGI Worker 進程可並行常駐，徹底釋放多核心 CPU 性能。
+目前的實際白名單是 `core/`、`user_pavilion/`、`vault_dajuezang/`、`00_黃金索引庫/`、`ai 總論/` 與 `ai 龍樹/`；每個根路徑的子資料夾均包含，其他路徑跳過。候選檔案來自當次查詢的核心與相關節點名稱，通過精確／包含匹配或 `totalScore >= 0.4` 的檔名重疊門檻後才讀取。此處的動態性是查詢時重評估與按需讀取，不是「存入某資料夾即觸發」的事件機制。
 
 ---
 
@@ -53,11 +48,11 @@ DROS 絕不在每次用戶查詢時去觸碰硬碟。系統運作嚴格遵循 **
 【DROS CQRS 讀寫分離架構】
 
     [唯寫沙盒 / Write Sandbox]
-    Obsidian (研經開採區) ────> 物理落地 (core/ 36,057 .md 檔案)
+    Obsidian (研經開採區) ────> 物理落地 (白名單根路徑下的 .md 檔案)
                                                         │
-                                                        │ (一次性掃描啟動 / reload)
+                                                        │ (每次查詢重新列舉候選 / 按需讀取)
                                                         ▼
-    [唯讀網關 / Read-Only Serving] ───> 記憶體字典 (In-Memory Graph) ───> [N 併發用戶]
+    [唯讀查詢 / Read-Only Query] ───> Graphify 檔名匹配 ───> [當次提示詞上下文]
 ```
 
 DROS 在系統設計層面徹底貫徹了 **CQRS (Command Query Responsibility Segregation / 讀寫職責分離)**：

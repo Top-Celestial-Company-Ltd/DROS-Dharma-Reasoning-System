@@ -28,6 +28,24 @@
 > 🏺 **Mahabodhi Pitaka (1.6GB Full Archive) Official High-Speed Download Site**:  
 > 👉 [https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z](https://dl.mahabodhi.co/d?id=bSgtD7YPWhEmF6Z)
 
+### 🔍 Graphify Scan Scope and Dynamic Retrieval
+
+`DROS Doctrinal Copilot` does not build an offline graph merely because a note is saved in a particular folder, and `Insights/` is not a special trigger directory. **On each question**, the plugin obtains Obsidian's Markdown file list and performs an on-demand filename match; only matched notes are read and injected into that request's prompt. A newly saved note can therefore participate in the next question without a separate indexing or graph-rebuild step.
+
+The current code uses the following path allowlist (matching is case-insensitive; descendants under each root are included):
+
+| Root path | Graphify behavior |
+| :--- | :--- |
+| `core/` | ✅ Scans core concepts and long-classics Markdown nodes |
+| `user_pavilion/` (physical folder: `User_Pavilion/`) | ✅ Scans personal notes, including `Insights/` and all descendants |
+| `vault_dajuezang/` (physical folder: `Vault_DajueZang/`) | ✅ Scans DajueZang Markdown nodes |
+| `00_黃金索引庫/` | ✅ Scans Markdown index nodes, if present |
+| `ai 總論/` | ✅ Scans Markdown nodes under this path, if present |
+| `ai 龍樹/` | ✅ Scans Markdown nodes under this path, if present |
+| Any other path | ❌ Excluded from Graphify candidates |
+
+“Dynamic accumulation” therefore means **the candidate files are re-evaluated at query time and read on demand**. It is not a background folder watcher, folder-triggered event, or prebuilt persistent graph database. Candidates come from the current query's core and related nodes, then pass exact, containment, and Chinese-character-overlap filename scoring (minimum threshold `0.4`). Personal notes may be retrieved, but they remain personal-layer material and do not become canonical authority merely by being included.
+
 ---
 
 ## 🚀 Quick Start Guide (Zero-Ops Architecture)

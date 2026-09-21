@@ -7,6 +7,8 @@
 
 在現代軟體工程中，沒有任何一種架構是完美的「萬靈丹（Silver Bullet）」。DROS (Deterministic Runtime OS) v8.0 採取了完全相反的降維打擊策略 ── **「無資料庫（Serverless Flat-File）與語義記憶體映射」**。
 
+> **範圍註記**：本文件部分段落描述後端／歷史版的記憶體索引服務模型；目前 `DROS Doctrinal Copilot` 的 Obsidian Graphify 路徑白名單與查詢時按需讀取契約，請以 `USER_GUIDE_v8.md` 及 `docs/ARCHITECTURE_v8.md` 的實際掃描章節為準。
+
 本白皮書旨在從現代計算機科學、物理 I/O、併發安全與軟體維運生命週期等多維度，冷酷剖析本系統的設計極限，呈現主流資料庫領域可能提出的技術批判，並給出 DROS 的戰略防禦防線。
 
 ---

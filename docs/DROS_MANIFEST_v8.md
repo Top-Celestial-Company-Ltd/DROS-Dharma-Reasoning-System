@@ -103,6 +103,8 @@ DROS 知識庫採取「**宗派義理本體（Core Pavilions）**」與「**物�
 
 ## 🔍 六、完整經藏檔案查驗日誌 (Dharma Knowledge Audit Log - 共 16933 篇)
 
+> **Graphify 掃描備註（v8.0.0）**：Obsidian 外掛在每次提問時即時取得 Markdown 檔案清單，僅將 `core/`、`User_Pavilion/`、`Vault_DajueZang/`、`00_黃金索引庫/`、`ai 總論/` 與 `ai 龍樹/`（含其子資料夾）列入候選；其他路徑不會被 Graphify 掃描。`User_Pavilion/Insights/` 只是一般子資料夾，不是特殊觸發器。命中筆記會依當次查詢的節點候選與檔名分數按需讀取；個人筆記仍屬 personal layer，不會因此成為 authority。
+
 *   00_黃金索引庫\0-大覺藏集索引.md
 *   00_黃金索引庫\0-法相辭典索引.md
 *   CONTRIBUTING.md
